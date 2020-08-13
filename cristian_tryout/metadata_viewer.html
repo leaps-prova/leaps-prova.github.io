@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Leaps</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <style>
+        body {
+            padding-top: 70px;
+        }
+
+
+        .tab-pane {
+            padding-top: 5px;
+            min-height: 150px;
+        }
+
+        #issueInfo {
+            min-height: 150px;
+        }
+
+        .list {
+            line-height: 1.2;
+            margin: 0;
+            overflow: hidden;
+            list-style-position: outside;
+            display: block;
+        }
+
+        #selector .list a {
+            color: black;
+        }
+
+        .inline-list li {
+            display: inline-block;
+        }
+
+
+        #file {
+            display: block;
+            text-align: justify;
+        }
+
+            #file img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+        #occurrences {
+            padding: 4px;
+            border: 1px solid grey;
+            min-height: 150px;
+        }
+
+            #occurrences .list a {
+                font-size: 80%;
+                color: black;
+            }
+
+        #wikiLink {
+            font-size: 80%;
+            padding-left: 5px;
+        }
+
+        .animate {
+            animation-name: bgcolor;
+            animation-duration: 0.75s;
+            animation-iteration-count: 3;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes bgcolor {
+            from {
+                background-color: #ffffff;
+            }
+
+            to {
+                background-color: #6A5ACD;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
+
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="index.html">Leaps</a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto w-100">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">Magazines</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="magazine_vitali.html">The Teacher</a>
+                        <a class="dropdown-item" href="magazine_cristian.html">The Student</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="documentation.html">Project documentation</a>
+                </li>
+            </ul>
+            <!-- Links -->
+
+        </div>
+        <!-- Collapsible content -->
+
+
+    </nav>
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-md-2" id="selector">
+                <div class="row clearfix border p-2">
+                    <div class="col-md-12">
+                        <div id="issueInfo">
+                            <img src="#" alt="issue cover" />
+                            <h5 id="issueTitle">
+                                Issue No.1
+                            </h5>
+                            <ul class="inline-list">
+                                <li><a href="#">Prev Article</a></li>
+                                <li><a href="#">Next Article</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix mt-3">
+                    <div class="col-md-12">
+                        <ul class="nav nav-tabs" id="leftTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="toc-tab" data-toggle="tab" href="#toc" role="tab" aria-controls="view" aria-selected="true">Table of Content</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="figures-tab" data-toggle="tab" href="#figures" role="tab" aria-controls="view" aria-selected="true">Figures</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="tables-tab" data-toggle="tab" href="#tables" role="tab" aria-controls="view" aria-selected="true">Tables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="asides-tab" data-toggle="tab" href="#asides" role="tab" aria-controls="view" aria-selected="true">Asides</a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content" id="leftContent">
+                            <div class="tab-pane active myBorder myBorder-notop" id="toc" role="tabpanel" aria-labelledby="toc-tab">
+                                <ul class="minimal"></ul>
+                            </div>
+                            <div class="tab-pane myBorder myBorder-notop" id="figures" role="tabpanel" aria-labelledby="figures-tab">
+                                <ul class="minimal"></ul>
+                            </div>
+                            <div class="tab-pane myBorder myBorder-notop" id="tables" role="tabpanel" aria-labelledby="tables-tab">
+                                <ul class="minimal"></ul>
+                            </div>
+                            <div class="tab-pane myBorder myBorder-notop" id="asides" role="tabpanel" aria-labelledby="asides-tab">
+                                <ul class="minimal"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="col-md-8" id="articleBody">
+                    <div class="row clearfix">
+                        <div class="col-md-12">
+                            <div class="jumbotron" id="title">
+                                <h1>Leaps</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix mt-3">
+                        <div class="col-md-12">
+                            <div id="file">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2" id="metadataViewer">
+                    <div class="row clearfix border p-2">
+                        <div class="col-md-12">
+                            <ul class="nav nav-tabs" id="rightTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="true">Info</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content" id="rightContent">
+                                <div class="tab-pane active myBorder myBorder-notop" id="info" role="tabpanel" aria-labelledby="info-tab">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix mt-4">
+                        <div class="col-md-12" id="occurrences">
+                            <h5></h5>
+                            <ul class="minimal"></ul>
+                            <a id="wikiLink" href="#" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="metadata_viewer.js"></script>
+</body>
+</html>
