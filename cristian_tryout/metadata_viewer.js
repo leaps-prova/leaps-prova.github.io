@@ -22,8 +22,7 @@ function main() {
         method: 'GET',
         url: 'article.html',
         success: function (d) {
-            $('#file').html(d)
-            $('#title').html($('#file h1'))
+            $('#file').html(d);
             addIds()
             fillInfo('#file', '#info')
             fillTabs()
