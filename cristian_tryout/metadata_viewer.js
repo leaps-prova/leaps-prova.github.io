@@ -1,3 +1,13 @@
+
+$("#styles").change(function {
+    var selectedStyle = $(this). children("option:selected").val();
+    $("#css").html("");
+    $("#css").load('' + selectedStyle + '.css');
+});
+
+
+
+
 String.prototype.tpl = function (o) {
     var r = this;
     for (var i in o) {
