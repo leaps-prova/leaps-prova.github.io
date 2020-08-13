@@ -25,10 +25,10 @@
 	padding-left: 120px;
 	padding-right: 120px;	
 	font-size: 13pt;
-	font-family: myHultogCoursive;
+	font-family: myHultogCoursive !important;
 	text-align: justify;
 	line-height: 1.5;
-	background-image: url("img/book.jpg");
+	background-image: url("img/book.jpg") !important;
 	background-position: center;
 	background-repeat: repeat;
 }
@@ -47,7 +47,7 @@
 	text-transform: uppercase;
 	line-height: 1.5;
 	font-size: 21pt;
-	font-family:  myHultog;
+	font-family:  myHultog !important;
 	padding-bottom: 20px;
 }
 #ArticleBody h3, #ArticleBody h4, #ArticleBody h5 {font-family:  myHultogCoursive;
@@ -61,7 +61,7 @@
 }
 
 #CoverWrapper {
-	font-family: myHultog;
+	font-family: myHultog !important;
 	text-transform: uppercase;
 	text-align: center;
 	line-height: 1.5;
