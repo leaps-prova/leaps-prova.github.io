@@ -1,6 +1,6 @@
 
-$("#styles").change(function {
-    var selectedStyle = $(this). children("option:selected").val();
+$("#styles").change(function() {
+    var selectedStyle = $(this).children("option:selected").val();
     $("#css").html("");
     $("#css").load('' + selectedStyle + '.css');
 });
