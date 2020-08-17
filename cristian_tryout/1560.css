@@ -17,9 +17,9 @@
    
   }
 
-#ArticleBody {
+#file {
 	color: #4a433e;
-    min-height:100% !important;
+    min-height:100%;
 	padding-top: 200px;
 	padding-bottom: 320px;
 	padding-left: 120px;
@@ -34,14 +34,14 @@
 }
 
 
-#ArticleBody h1 {
+#file h1 {
 	text-transform: uppercase;
 	text-align: center;
 	font-family: myHultogCoursive;
     font-size: 34pt;
 	letter-spacing: 6px;
 }
-#ArticleBody h2 {
+#file h2 {
 	letter-spacing: 10px;
 	text-align: center; 
 	text-transform: uppercase;
@@ -50,7 +50,7 @@
 	font-family:  myHultog !important;
 	padding-bottom: 20px;
 }
-#ArticleBody h3, #ArticleBody h4, #ArticleBody h5 {font-family:  myHultogCoursive;
+#file h3, #file h4, #file h5 {font-family:  myHultogCoursive;
 	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: 10px;
@@ -69,7 +69,7 @@
 	font-family:  myHultog;
 	padding-bottom: 125px;
 }
-#Articlebody img {
+#file img {
     max-width: 100%;
     max-height: 100%;
 	display: block;
@@ -82,7 +82,7 @@
     margin-bottom: 15px;
 }
 
-#Articlebody p.pubnote {
+#file p.pubnote {
 	font-family: myHultogCoursive;
 	font-size:21pt;
 	padding-bottom:10px;
@@ -91,42 +91,42 @@
 	font-family: myCaps;
 	float: left;
 	font-size: 90pt;
-	line-height: 65px;
+	line-height: 90px;
 	padding-top: 20px;
 	padding-right: 6px;
 }
-#Articlebody figcaption {
+#file figcaption {
 	font-size: 10pt;
 	text-align: center;
 	line-height: 1.5;
     padding: 5px;
 }
 
-#Articlebody th {border: 1px solid #4a433e;
+#file th {border: 1px solid #4a433e;
 	font-size: 15pt;
-	text-transform: uppercase;
+	text-transform: uppercase !important;
 	padding: 10px;
 
 }
 
 
-#Articlebody td {border: 1px solid #4a433e;
-	padding: 10px;
+#file td {border: 1px solid #4a433e;
+	padding: 10px !important;
 }
 
 
-#Articlebody tr{
-	border: 1px solid #4a433e;
+#file tr{
+	border: 1px solid #4a433e !important;
 }
 
 
-#Articlebody table {border: 4px solid;
+#file table {border: 4px solid !important;
 	margin-bottom: 25px;
 	margin-top: 25px;
-	word-break: break-word;
+	word-break: break-word !important;
 	margin-left: auto;
 	margin-right: auto;
 	color: #4a433e;
 	border-spacing: 1px;
-	border-collapse: separate;
+	border-collapse: separate !important;
 }

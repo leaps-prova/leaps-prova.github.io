@@ -1,8 +1,8 @@
 
 $("#styles").change(function() {
     var selectedStyle = $(this).children("option:selected").val();
-    $("#css").html("");
-    $("#css").load('' + selectedStyle + '.css');
+    $("#ArticleCss").html("");
+    $("#ArticleCss").load('' + selectedStyle + '.css');
 });
 
 
