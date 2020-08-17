@@ -20,7 +20,7 @@ $(document).ready(main);
 function main() {
     $.ajax({
         method: 'GET',
-        url: 'article.html',
+        url: 'NYTimes.html',
         success: function (d) {
             $('#file').html(d);
             addIds()
