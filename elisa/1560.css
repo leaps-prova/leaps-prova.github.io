@@ -41,6 +41,7 @@
     font-size: 34pt;
 	letter-spacing: 6px;
 }
+
 #ArticleBody h2 {
 	letter-spacing: 10px;
 	text-align: center; 
@@ -87,6 +88,7 @@
 	font-size:21pt;
 	padding-bottom:10px;
 }
+
 #Credits > p:first-of-type::first-letter, #Summary > p:first-of-type::first-letter, #ContentWrapper > p:first-of-type::first-letter, #ContentWrapper h2 ~ p:first-of-type::first-letter {
 	font-family: myCaps;
 	float: left;
@@ -130,3 +132,4 @@
 	border-spacing: 1px;
 	border-collapse: separate;
 }
+

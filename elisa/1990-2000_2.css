@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
 a {
 	color: #ff3399;
@@ -25,7 +26,7 @@ a {
 	font-weight: 200 !important;
 	letter-spacing: 0.002em;
 	text-transform: lowercase;
-	font-size: 4em;
+	font-size: 3.5em;
 	line-height: 0.8em;
 	text-align:left;
 	margin-bottom: 0rem;
@@ -33,15 +34,26 @@ a {
 }
 
 span#title_word {
+	font-family: 'Shadows Into Light', cursive;
 	color: #ff3399;
-	font-size: 120%;
+	font-size: 150%;
+	margin: 2%;
 }
+
+/**span#title_word_2 {
+	color: #ff8000;
+}
+
+span#title_word_3 {
+	color:#00ff00;
+} **/
 
 #ArticleBody h2 {
 	font-family: 'Barlow Semi Condensed', sans-serif !important;
 	letter-spacing: 0.002em;
 	line-height: 0.9em;
 	font-size: 2em;
+	background-color: #00e6b8;
 /**	margin-left: 1.5em; **/
 }
 
@@ -61,6 +73,7 @@ span#title_word {
 
 #Cover .byline {
 	font-family: 'Questrial', sans-serif;
+	font-size: 1.5em;
 	line-height: 0.5em;
 	margin-left: 7%;
 	color: #ff3399
@@ -73,11 +86,11 @@ span#title_word {
 	font-size:0.7em;
 	line-height: 1em;
 	font-style: oblique;
-	background-color: #ffb3d9;
-	border: dotted 5px #ff6600;
+	background-color: #ffff80;
+	border: dotted 7px #ff6600;
 	border-top-right-radius: 25px;
-	border-bottom: dashed 2px #ffb3d9;
-	border-left: dashed 2px #ffb3d9;
+	border-bottom: dashed 2px #ffff80;
+	border-left: dashed 2px #ffff80;
 	padding: 3%;
 	margin-left: -13%;
 	/**margin-bottom: 1.5em;**/
@@ -93,14 +106,20 @@ span#title_word {
 	font-family: 'Questrial', sans-serif;
 	font-size:0.8em;
 	line-height: 1em;
-	background-color: #ffb3d9;
-	border: dotted 5px #ff6600;
+	background-color: #ffff80;
+	border: dotted 7px #ff6600;
 	border-bottom-right-radius: 25px;
-	border-top: dashed 2px #ffb3d9;
-	border-left: dashed 2px #ffb3d9;
+	border-top: dashed 2px #ffff80;
+	border-left: dashed 2px #ffff80;
 	padding: 3%;
 	margin-bottom: 1.5em;
 	margin-left: -13%;
+}
+
+#Summary span.label {
+	color: #0000b3;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 #Introduction p:first-of-type::first-letter, #ContentWrapper > p:first-of-type::first-letter, #ContentWrapper h2 ~ p:first-of-type::first-letter {
@@ -117,7 +136,7 @@ span#title_word {
 }
 
 figure {
-	background-color: #ff3399;
+/**	background-color: #ff3399; **/
 	float:left;
 	width:100%;
 	margin-left:0%;
@@ -127,7 +146,7 @@ img {
     max-width: 96%;
     max-height: 96%;
 	float:center; 
-	background-color: #ff3399;
+/**	background-color: #ff3399; **/
 	padding-left: 2%; 
 	padding-right: 2%;
 	margin-bottom: 0%;
@@ -137,9 +156,12 @@ img {
 figcaption {
 	font-family: 'Barlow Semi Condensed', sans-serif !important;
 	font-size: 0.8em;
-	background-color: #ff3399;
+	background-color: #ff8000;
 	color: white;
-	padding: 2%;
+	padding: 1%;
+	width: 60%;
+	float:right;
+	transform: rotate(-3deg);
 }
 
 figcaption .num {
@@ -168,16 +190,16 @@ figcaption .num {
 
 tr:nth-child(even) {
 	/**background-color: #f2f2f2;**/
-	background-color: #e6e6e6;
+	background-color: #ffcc00;
 }
 
 tr:nth-child(odd) {
 	/**background-color: #f2f2f2;**/
-	background-color: #f2f2f2;
+	background-color: #ff9933;
 }
 
 th {
-	background-color: #ffb3d9;
+	background-color: #ff3333;
 }
 
 table caption {
@@ -199,10 +221,13 @@ table caption .num {
 
 #References {
 	margin-top: 10%;
+	padding-right: 14%;
+	margin-right: -14%;
 /**	margin-left: 10%;
 	margin-right: -5%; **/
-	border: dotted 5px #d580ff;
+	border: dotted 7px #ff6600;
 	border-radius: 25px;
+	background-color: #f2e6ff;
 	padding: 3%;
 }
 
@@ -216,7 +241,8 @@ table caption .num {
 }
 
 #References h2 {
-	color: #ff3399;
+	color: #ff6600;
+	background-color: transparent;
 }
 
 @media only screen and (max-width:780px) {
