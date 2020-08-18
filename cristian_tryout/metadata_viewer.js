@@ -85,7 +85,7 @@ function fillInfo(from, where) {
 
 function fillTabs() {
     fillToCTab('#file h2', 'heading', '#toc')
-    fillVisualContentTab('#file figure', 'figure', '#figures')
+    fillVisualContentTab('#ArticleBody figure', 'figure', '#figures')
     fillVisualContentTab('#file table', 'table', '#tables')
     fillIndex('#file .person', 'person', '#persons')
     fillIndex('#file .place', 'place', '#places')
