@@ -1,4 +1,9 @@
-
+$(window).on('scroll', function(event) {
+    var scrollValue = $(window).scrollTop();
+    if (scrollValue == settings.scrollTopPx || scrollValue > 70) {
+         $('#selector').addClass('fixed-top');
+    } 
+});
 $("#styles").change(function() {
     var selectedStyle = $(this).children("option:selected").val();
     $("#ArticleCss").html("");
