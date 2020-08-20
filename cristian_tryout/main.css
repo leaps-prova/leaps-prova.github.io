@@ -23,7 +23,7 @@ body {
 
 #selector {
     position: fixed;
-    width:100%;
+    max-width:100%;
 }
 
 #selector .list a {
