@@ -41,6 +41,11 @@
             display: inline-block;
         }
 
+        #fileWrapper {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+
         #ArticleBody {
             text-align:justify;
         }
@@ -79,12 +84,43 @@
             font-size:0.9em;
         }
         #occurrences {
-            background-color:#D3D3D3;
             margin-left:auto;
             margin-right:auto;
             padding-top:25px;
             padding-bottom:25px;
         }
+        .offcanvas {
+	        left: 0;
+            height:100%;
+            position: fixed;
+            padding-top: 45px;
+	        width: 320px;
+            z-index: 1;
+	        transform: translateX( -100% );
+	        transition: all 0.25s;
+            overflow-y:scroll;
+            background-color: white;
+        }
+
+        .closebtn {
+            color:black;
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            display:none;
+        }
+        .closebtn:hover {
+            text-decoration: none;
+        }
+
+        .openbtn {
+            font-size:30px; 
+            cursor:pointer;
+            display: none;/*value will change via javascript*/
+        }
+
 
             #occurrences .list a {
                 font-size: 80%;
@@ -163,7 +199,8 @@
     </nav>
     <div class="container-fluid">
         <div class="row clearfix">
-            <div class="col-md-2" id="selector">
+            <div class="col-md-3 col-xl-2" id="selector">
+                <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
                 <div class="row clearfix border p-2">
                     <div class="col-md-12">
                         <div id="issueInfo">
@@ -240,11 +277,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-10" id="fileWrapper">
+            <div class="col-md-9 col-xl-10" id="fileWrapper">
+                <span class="openbtn" onclick="openNav()">&#9776; open</span>
                 <div class="row clearfix mt-3">
-                    <div class="col-md-11">
-                        <div id="file">
-                        </div>
+                    <div class="col-md-12" id="file">
                     </div>
                 </div>
             </div>
