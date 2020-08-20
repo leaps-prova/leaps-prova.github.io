@@ -11,7 +11,7 @@ var expandCollapse = function(){
             // add a class .collapse to a div .showHide
             $('#selector').addClass('offcanvas');
             // set display: "" in css for the toggle button .btn.btn-primary
-            $('.closebtn').css('display', 'block');// removes display property to make it visible
+            $('.closebtn').css('display', 'inline-block');// removes display property to make it visible
             $('.openbtn').css('display', 'block');// removes display property to make it visible
         });
     }
