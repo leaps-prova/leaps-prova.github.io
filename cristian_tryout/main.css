@@ -21,10 +21,6 @@ body {
     display: block;
 }
 
-#selector {
-    position: fixed;
-    max-width:100%;
-}
 
 #selector .list a {
     padding-top:25px;
