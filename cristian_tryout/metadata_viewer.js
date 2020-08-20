@@ -1,8 +1,8 @@
 
 $("#styles").change(function() {
     var selectedStyle = $(this).children("option:selected").val();
-    $("#css").html("");
-    $("#css").load('' + selectedStyle + '.css');
+    $("#ArticleCss").html("");
+    $("#ArticleCss").load('' + selectedStyle + '.css');
 });
 
 
@@ -36,8 +36,7 @@ function main() {
 function addIds() {
     addId('#file .person', 'person')
     addId('#file .place', 'place')
-    addId('#file .entity', 'entity')
-    addId('#file .concept', 'entity')
+    addId('#file .entity', 'thing')
     addId('#file h2', 'heading')
     addId('#file table', 'table')
     addId('#file figure', 'figure')
@@ -88,92 +87,68 @@ function fillTabs() {
     fillToCTab('#file h2', 'heading', '#toc')
     fillVisualContentTab('#file figure', 'figure', '#figures')
     fillVisualContentTab('#file table', 'table', '#tables')
-    fillVisualContentTab('#file .aside', 'aside', '#asides')
-    createRightPane('person', '#right')
-    createRightPane('place', '#right')
-    createRightPane('entity', '#right')
-    createRightPane('concept', '#right')
+    fillIndex('#file .person', 'person', '#persons')
+    fillIndex('#file .place', 'place', '#places')
+    fillIndex('#file .entity', 'thing', '#things')
 }
 
 function fillToCTab(what, style, where) {
     var listItem = `<li class="list $style"><a href="#" onclick="goto('$place')">$content</a></li>`;
     var elements = $(what);
-    if ($(what).length) {
-        for (var i = 0; i < elements.length; i++) {
-            $(where + ' ul').append(listItem.tpl({
-                style: style,
-                place: '#' + elements[i].id,
-                content: elements[i].innerHTML
-            }));
-        }
-    }
-    else {
-        $(where + '-tab').remove();
-        $(where).remove();
+    for (var i = 0; i < elements.length; i++) {
+        $(where + ' ul').append(listItem.tpl({
+            style: style,
+            place: '#' + elements[i].id,
+            content: elements[i].innerHTML
+        }));
     }
 }
 
 
 function fillVisualContentTab(what, style, where) {
-    var listItem = `<li class="list $style"><a href="#" onclick="goto('$place')">$content</a></li>`;
+    var visualItem = `<div class="$what-wrapper"><$what class="$what-widget">$content</$what></div>`;
     var elements = $(what);
-    var id = '1';
     if ($(what).length) {
         for (var i = 0; i < elements.length; i++) {
-            $(where + ' ul').append(listItem.tpl({
-                style: style,
-                place: '#' + elements[i].id,
-                content: style[0].toUpperCase() + style.slice(1) + ' ' + id++ + '.'
+            $(where).append(visualItem.tpl({
+                what: style,
+                content: elements[i].innerHTML
             }));
         }
     }
     else {
-        $(where + '-tab').remove();
         $(where).remove();
-    }
-}
-
-
-function createRightPane(what, where) {
-    var navTabTpl = `<li class="nav-item"><a class="nav-link" id="$whats-tab" data-toggle="tab" href="#$whats" role="tab" aria-controls="view" aria-selected="true">$title</a></li> `;
-    var tabContentTpl = `<div class="tab-pane myBorder myBorder-notop" id="$whats" role="tabpanel" aria-labelledby="$whats-tab"><ul class="minimal"></ul></div>`;
-    if ($('#file .' + what).length) {
-        $(where + 'Tab').append(navTabTpl.tpl({
-            what: what,
-            title: what[0].toUpperCase() + what.slice(1)
-        }));
-        $(where + 'Content').append(tabContentTpl.tpl({
-            what: what,
-        }));
-        fillIndex('#file .' + what, what, '#' + what + 's');
     }
 }
 
 function fillIndex(what, style, where) {
     var listItem = `<li class="list $style"><a href="#occurrences" onclick="fillOccurrenceTab('$what', 'occurrence', '#occurrences')">$content</a> ($num)</li>`;
     var elements = $(what);
-    var namedict = {};
-    for (var i = 0; i < elements.length; i++) {
-        var currName = elements[i].innerText;
-        var className = currName.split(' ').join('-').replace(/\./g, '');
-        elements[i].classList.add(className);
-        if (!(currName in namedict)) {
-            namedict[currName] = 0;
-        }
+    if ($(what).length) {
+        var namedict = {};
+        for (var i = 0; i < elements.length; i++) {
+            var currName = elements[i].innerText;
+            var className = currName.split(' ').join('-').replace(/\./g, '');
+            elements[i].classList.add(className);
+            if (!(currName in namedict)) {
+                namedict[currName] = 0;
+            }
 
-        namedict[currName]++;
-        console.log(className);
-    }
-    var arrOfArrays = Object.entries(namedict).sort((a, b) => parseInt(b[1]) - parseInt(a[1]));
-    for (const [key, value] of arrOfArrays) {
-        var className1 = key.split(' ').join('-').replace(/\./g, '');
-        $(where + " ul").append(listItem.tpl({
-            content: String(key),
-            num: String(value),
-            what: '#file .' + className1,
-            style: style,
+            namedict[currName]++;
         }
-        ));
+        var arrOfArrays = Object.entries(namedict).sort((a, b) => parseInt(b[1]) - parseInt(a[1]));
+        for (const [key, value] of arrOfArrays) {
+            var className = key.split(' ').join('-').replace(/\./g, '');
+            $(where + " ul").append(listItem.tpl({
+                content: String(key),
+                num: String(value),
+                what: '#file .' + className,
+                style: style,
+            }));
+        }
+    }
+    else {
+        $(where).remove();
     }
 }
 

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Leaps</title>
+    <title>Leaps - Validation of a Functional Pyelocalyceal Renal Model for the Evaluation of Renal Calculi Passage While Riding a Roller Coaster</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -34,28 +34,56 @@
         }
 
         #selector .list a {
-            color: black;
+            padding-top:25px;
         }
 
         .inline-list li {
             display: inline-block;
         }
 
-
-        #file {
-            display: block;
-            text-align: justify;
+        #ArticleBody {
+            text-align:justify;
         }
 
-            #file img {
-                max-width: 100%;
-                max-height: 100%;
-            }
-
+        img {
+            display:block;
+            margin-left: auto;
+            margin-right:auto;
+            max-height:100%;
+            max-width:100%;
+        }
+        
+        .figure-wrapper, .table-wrapper {
+            display:block;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            background-color:#D3D3D3
+        }
+        .figure-widget {
+            max-width:80%;
+            max-height: 80%;
+            margin-right: auto;
+            margin-left: auto;
+            padding-top:25px;
+            padding-bottom:25px;
+        }
+        .table-widget {
+            display: block;
+            max-width:80%;
+            max-height: 80%;
+            margin-right: auto;
+            margin-left: auto;
+            padding-top:25px;
+            padding-bottom:25px;
+            overflow: scroll;
+            font-size:0.9em;
+        }
         #occurrences {
-            padding: 4px;
-            border: 1px solid grey;
-            min-height: 150px;
+            background-color:#D3D3D3;
+            margin-left:auto;
+            margin-right:auto;
+            padding-top:25px;
+            padding-bottom:25px;
         }
 
             #occurrences .list a {
@@ -70,7 +98,7 @@
 
         .animate {
             animation-name: bgcolor;
-            animation-duration: 0.75s;
+            animation-duration: 1.50s;
             animation-iteration-count: 3;
             animation-fill-mode: backwards;
         }
@@ -81,11 +109,12 @@
             }
 
             to {
-                background-color: #6A5ACD;
+                background-color: lightblue;
             }
         }
     </style>
-    <style id="css" type="text/css"></style>
+    <style id="ArticleCss" type="text/css">
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -138,14 +167,19 @@
                 <div class="row clearfix border p-2">
                     <div class="col-md-12">
                         <div id="issueInfo">
-                            <img src="#" alt="issue cover" />
-                            <h5 id="issueTitle">
+                            <h3 id="issueTitle">
                                 Issue No.1
-                            </h5>
+                            </h3>
                             <ul class="inline-list">
                                 <li><a href="#">Prev Article</a></li>
                                 <li><a href="#">Next Article</a></li>
                             </ul>
+                            <label>Choose a typographic style:</label>
+                            <select id="styles" name="styleslist">
+                                <option value="none" selected="selected">None</option>
+                                <option value="1560">1560</option>
+                                <option value="2000">2000</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -153,80 +187,68 @@
                     <div class="col-md-12">
                         <ul class="nav nav-tabs" id="leftTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="toc-tab" data-toggle="tab" href="#toc" role="tab" aria-controls="view" aria-selected="true">Table of Content</a>
+                                <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="true">Info</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="figures-tab" data-toggle="tab" href="#figures" role="tab" aria-controls="view" aria-selected="true">Figures</a>
+                                <a class="nav-link" id="toc-tab" data-toggle="tab" href="#toc" role="tab" aria-controls="view" aria-selected="true">Table of Content</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="tables-tab" data-toggle="tab" href="#tables" role="tab" aria-controls="view" aria-selected="true">Tables</a>
+                                <a class="nav-link" id="visual-tab" data-toggle="tab" href="#visual" role="tab" aria-controls="view" aria-selected="true">Figures & Tables</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="asides-tab" data-toggle="tab" href="#asides" role="tab" aria-controls="view" aria-selected="true">Asides</a>
+                                <a class="nav-link" id="entities-tab" data-toggle="tab" href="#entities" role="tab" aria-controls="view" aria-selected="true">Named Entities</a>
                             </li>
                         </ul>
 
                         <!-- Tab panes -->
                         <div class="tab-content" id="leftContent">
-                            <div class="tab-pane active myBorder myBorder-notop" id="toc" role="tabpanel" aria-labelledby="toc-tab">
+                            <div class="tab-pane active myBorder myBorder-notop" id="info" role="tabpanel" aria-labelledby="info-tab">
+                            </div>
+                            <div class="tab-pane myBorder myBorder-notop" id="toc" role="tabpanel" aria-labelledby="toc-tab">
                                 <ul class="minimal"></ul>
                             </div>
-                            <div class="tab-pane myBorder myBorder-notop" id="figures" role="tabpanel" aria-labelledby="figures-tab">
-                                <ul class="minimal"></ul>
+                            <div class="tab-pane myBorder myBorder-notop" id="visual" role="tabpanel" aria-labelledby="visual-tab">
+                                <div id="figures" class="mt-3">
+                                    <h5>Figures</h5>
+                                </div>
+                                <div id="tables" class="mt-3">
+                                    <h5>Tables</h5>
+                                </div>
                             </div>
-                            <div class="tab-pane myBorder myBorder-notop" id="tables" role="tabpanel" aria-labelledby="tables-tab">
-                                <ul class="minimal"></ul>
-                            </div>
-                            <div class="tab-pane myBorder myBorder-notop" id="asides" role="tabpanel" aria-labelledby="asides-tab">
-                                <ul class="minimal"></ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class = "row clearfix mt-3">
-                    <div class="col-md-12">
-                        <label>Choose a typographic style:</label>
-                        <select id="styles" name="styleslist">
-                            <option value="none" selected="selected">None</option>
-                            <option value="1560">1560</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-                <div class="col-md-8" id="fileWrapper">
-                    <div class="row clearfix mt-3">
-                        <div class="col-md-12">
-                            <div id="file">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2" id="metadataViewer">
-                    <div class="row clearfix border p-2">
-                        <div class="col-md-12">
-                            <ul class="nav nav-tabs" id="rightTab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="true">Info</a>
-                                </li>
-                            </ul>
-
-                            <!-- Tab panes -->
-                            <div class="tab-content" id="rightContent">
-                                <div class="tab-pane active myBorder myBorder-notop" id="info" role="tabpanel" aria-labelledby="info-tab">
+                            <div class="tab-pane myBorder myBorder-notop" id="entities" role="tabpanel" aria-labelledby="entities-tab">
+                                <div id="persons" class="mt-3">
+                                    <h5>Persons</h5>
+                                    <ul class="minimal"></ul>
+                                </div>
+                                <div id="places" class="mt-3">
+                                    <h5>Places</h5>
+                                    <ul class="minimal"></ul>
+                                </div>
+                                <div id="things" class="mt-3">
+                                    <h5>Things</h5>
+                                    <ul class="minimal"></ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row clearfix mt-4">
-                        <div class="col-md-12" id="occurrences">
-                            <h5></h5>
-                            <ul class="minimal"></ul>
-                            <a id="wikiLink" href="#" target="_blank"></a>
+                </div>
+                <div class="row clearfix mt-4">
+                    <div class="col-md-12" id="occurrences">
+                        <h5></h5>
+                        <ul class="minimal"></ul>
+                        <a id="wikiLink" href="#" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10" id="fileWrapper">
+                <div class="row clearfix mt-3">
+                    <div class="col-md-11">
+                        <div id="file">
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
