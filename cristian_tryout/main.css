@@ -1,0 +1,164 @@
+body {
+    padding-top: 70px;
+}
+
+
+.tab-pane {
+    padding-top: 5px;
+    min-height: 150px;
+}
+
+#issueInfo {
+    display:block;
+    min-height: 150px;
+}
+
+.list {
+    line-height: 1.2;
+    margin: 0;
+    overflow: hidden;
+    list-style-position: outside;
+    display: block;
+}
+
+#selector .list a {
+    padding-top:25px;
+}
+
+.inline-list li {
+    display: inline-block;
+}
+
+#fileWrapper {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+#ArticleBody {
+    text-align:justify;
+}
+
+#ArticleBody img {
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+    max-height:100%;
+    max-width:100%;
+}
+#ArticleBody figcaption {
+    text-align: center;
+    padding: 5px;
+}
+
+#ArticleBody table {
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.figure-wrapper, .table-wrapper {
+    display:block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color:#D3D3D3;
+}
+
+.figure-widget {
+    text-align:center;
+}
+.figure-widget img {
+    display:block;
+    max-width:80%;
+    max-height: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top:25px;
+    padding-bottom:25px;
+}
+.table-widget {
+    display: block;
+    max-width:80%;
+    max-height: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top:25px;
+    padding-bottom:25px;
+    overflow: scroll;
+    font-size:0.9em;
+}
+#occurrences {
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:25px;
+    padding-bottom:25px;
+}
+.offcanvas {
+    left: 0;
+    height:100%;
+    position: fixed;
+    top:0;
+    padding-top: 70px;
+    width: 320px;
+    z-index: 1;
+    transform: translateX( -100% );
+    transition: all 0.25s;
+    overflow-y:scroll;
+    background-color: white;
+}
+
+.closebtn {
+    color:black;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    display:none;
+}
+.closebtn:hover {
+    text-decoration: none;
+}
+
+.openbtn {
+    font-size:30px; 
+    cursor:pointer;
+    display: none;/*value will change via javascript*/
+}
+
+
+    #occurrences .list a {
+        font-size: 80%;
+        color: black;
+    }
+
+#wikiLink {
+    font-size: 80%;
+    padding-left: 5px;
+}
+
+.animate {
+    animation-name: bgcolor;
+    animation-duration: 1.50s;
+    animation-iteration-count: 3;
+    animation-fill-mode: backwards;
+}
+
+@keyframes bgcolor {
+    from {
+        background-color: #ffffff;
+    }
+
+    to {
+        background-color: lightblue;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #issueInfo {
+        top:0;
+        margin-left:0;
+        display:inline-block;
+        width:200px;
+        min-height: 150px;
+    }    
+}
