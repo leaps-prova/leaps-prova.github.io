@@ -21,6 +21,11 @@ body {
     display: block;
 }
 
+#selector {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
 #selector .list a {
     padding-top:25px;
 }
@@ -149,7 +154,7 @@ body {
     }
 
     to {
-        background-color: lightblue;
+        background-color: greenyellow;
     }
 }
 
