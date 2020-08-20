@@ -61,81 +61,83 @@
     </nav>
     <div class="container-fluid">
         <div class="row clearfix">
-            <div class="col-md-3 col-xl-2" id="selector">
-                <div class="row clearfix border p-2">
-                    <div class="col-md-12">
-                        <div id="issueInfo">
-                            <h3 id="issueTitle">
-                                Issue No.1
-                            </h3>
-                            <ul class="inline-list">
-                                <li><a href="#">Prev Article</a></li>
-                                <li><a href="#">Next Article</a></li>
+            <div class="col-md-3 col-xl-2">
+                <div id="selector">
+                    <div class="row clearfix border p-2">
+                        <div class="col-md-12">
+                            <div id="issueInfo">
+                                <h3 id="issueTitle">
+                                    Issue No.1
+                                </h3>
+                                <ul class="inline-list">
+                                    <li><a href="#">Prev Article</a></li>
+                                    <li><a href="#">Next Article</a></li>
+                                </ul>
+                                <label>Choose a typographic style:</label>
+                                <select id="styles" name="styleslist">
+                                    <option value="none" selected="selected">None</option>
+                                    <option value="1560">1560</option>
+                                    <option value="2000">2000</option>
+                                </select>
+                            </div>
+                            <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+                        </div>
+                    </div>
+                    <div class="row clearfix mt-3">
+                        <div class="col-md-12">
+                            <ul class="nav nav-tabs" id="leftTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="true">Info</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="toc-tab" data-toggle="tab" href="#toc" role="tab" aria-controls="view" aria-selected="true">Table of Content</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="visual-tab" data-toggle="tab" href="#visual" role="tab" aria-controls="view" aria-selected="true">Figures & Tables</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="entities-tab" data-toggle="tab" href="#entities" role="tab" aria-controls="view" aria-selected="true">Named Entities</a>
+                                </li>
                             </ul>
-                            <label>Choose a typographic style:</label>
-                            <select id="styles" name="styleslist">
-                                <option value="none" selected="selected">None</option>
-                                <option value="1560">1560</option>
-                                <option value="2000">2000</option>
-                            </select>
-                        </div>
-                        <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
-                    </div>
-                </div>
-                <div class="row clearfix mt-3">
-                    <div class="col-md-12">
-                        <ul class="nav nav-tabs" id="leftTab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="true">Info</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="toc-tab" data-toggle="tab" href="#toc" role="tab" aria-controls="view" aria-selected="true">Table of Content</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="visual-tab" data-toggle="tab" href="#visual" role="tab" aria-controls="view" aria-selected="true">Figures & Tables</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="entities-tab" data-toggle="tab" href="#entities" role="tab" aria-controls="view" aria-selected="true">Named Entities</a>
-                            </li>
-                        </ul>
 
-                        <!-- Tab panes -->
-                        <div class="tab-content" id="leftContent">
-                            <div class="tab-pane active myBorder myBorder-notop" id="info" role="tabpanel" aria-labelledby="info-tab">
-                            </div>
-                            <div class="tab-pane myBorder myBorder-notop" id="toc" role="tabpanel" aria-labelledby="toc-tab">
-                                <ul class="minimal"></ul>
-                            </div>
-                            <div class="tab-pane myBorder myBorder-notop" id="visual" role="tabpanel" aria-labelledby="visual-tab">
-                                <div id="figures" class="mt-3">
-                                    <h5>Figures</h5>
+                            <!-- Tab panes -->
+                            <div class="tab-content" id="leftContent">
+                                <div class="tab-pane active myBorder myBorder-notop" id="info" role="tabpanel" aria-labelledby="info-tab">
                                 </div>
-                                <div id="tables" class="mt-3">
-                                    <h5>Tables</h5>
-                                </div>
-                            </div>
-                            <div class="tab-pane myBorder myBorder-notop" id="entities" role="tabpanel" aria-labelledby="entities-tab">
-                                <div id="persons" class="mt-3">
-                                    <h5>Persons</h5>
+                                <div class="tab-pane myBorder myBorder-notop" id="toc" role="tabpanel" aria-labelledby="toc-tab">
                                     <ul class="minimal"></ul>
                                 </div>
-                                <div id="places" class="mt-3">
-                                    <h5>Places</h5>
-                                    <ul class="minimal"></ul>
+                                <div class="tab-pane myBorder myBorder-notop" id="visual" role="tabpanel" aria-labelledby="visual-tab">
+                                    <div id="figures" class="mt-3">
+                                        <h5>Figures</h5>
+                                    </div>
+                                    <div id="tables" class="mt-3">
+                                        <h5>Tables</h5>
+                                    </div>
                                 </div>
-                                <div id="things" class="mt-3">
-                                    <h5>Things</h5>
-                                    <ul class="minimal"></ul>
+                                <div class="tab-pane myBorder myBorder-notop" id="entities" role="tabpanel" aria-labelledby="entities-tab">
+                                    <div id="persons" class="mt-3">
+                                        <h5>Persons</h5>
+                                        <ul class="minimal"></ul>
+                                    </div>
+                                    <div id="places" class="mt-3">
+                                        <h5>Places</h5>
+                                        <ul class="minimal"></ul>
+                                    </div>
+                                    <div id="things" class="mt-3">
+                                        <h5>Things</h5>
+                                        <ul class="minimal"></ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row clearfix mt-4">
-                    <div class="col-md-12" id="occurrences">
-                        <h5></h5>
-                        <ul class="minimal"></ul>
-                        <a id="wikiLink" href="#" target="_blank"></a>
+                    <div class="row clearfix mt-4">
+                        <div class="col-md-12" id="occurrences">
+                            <h5></h5>
+                            <ul class="minimal"></ul>
+                            <a id="wikiLink" href="#" target="_blank"></a>
+                        </div>
                     </div>
                 </div>
             </div>
