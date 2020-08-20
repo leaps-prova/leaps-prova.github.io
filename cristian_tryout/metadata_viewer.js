@@ -5,7 +5,36 @@ $("#styles").change(function() {
     $("#ArticleCss").load('' + selectedStyle + '.css');
 });
 
-
+var expandCollapse = function(){
+    if ( $(window).width() < 768 ) {
+        $(function(){
+            // add a class .collapse to a div .showHide
+            $('#selector').addClass('offcanvas');
+            // set display: "" in css for the toggle button .btn.btn-primary
+            $('.closebtn').css('display', 'block');// removes display property to make it visible
+            $('.openbtn').css('display', 'block');// removes display property to make it visible
+        });
+    }
+    else {
+        $(function(){
+            // remove a class .collapse from a div .showHide
+            $('#selector').removeClass('offcanvas');
+            $('#fileWrapper').removeAttr('style');
+            $('#selector').removeAttr('style');
+            // set display: none in css for the toggle button .btn.btn-primary  
+            $('.closebtn').css('display', 'none');// hides button display on bigger screen
+            $('.openbtn').css('display', 'none');// hides button display on bigger screen
+        });
+    }
+}
+function openNav() {
+    $('.offcanvas').css('transform', 'translateX( 0 )');
+    $('.fileWrapper').css('transform', 'translateX( 320px )');
+    }
+function closeNav() {
+    $('.offcanvas').css('transform', 'translateX( -100% )');
+    $('.fileWrapper').css('transform', 'translateX( 0 )');
+}
 
 
 String.prototype.tpl = function (o) {
@@ -16,8 +45,10 @@ String.prototype.tpl = function (o) {
     return r
 }
 $(document).ready(main);
+$(window).resize(expandCollapse);
 
 function main() {
+    expandCollapse()
     $.ajax({
         method: 'GET',
         url: 'article.html',
@@ -172,7 +203,9 @@ function fillOccurrenceTab(what, style, where) {
 }
 
 function goto(id) {
-    $('.nav-tabs a[href="#file"]').tab('show');
+    if ( $(window).width() < 768 ) {
+        closeNav()
+    }
     $('html, body').animate({
         scrollTop: $(id).offset().top - 70
     }, 200);
