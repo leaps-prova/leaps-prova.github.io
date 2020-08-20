@@ -21,6 +21,10 @@ body {
     display: block;
 }
 
+#selector {
+    position: fixed;
+}
+
 #selector .list a {
     padding-top:25px;
 }
