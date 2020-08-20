@@ -20,10 +20,6 @@ body {
     list-style-position: outside;
     display: block;
 }
-#selector {
-    position: fixed;
-    width:inherit;
-}
 
 #selector .list a {
     padding-top:25px;
