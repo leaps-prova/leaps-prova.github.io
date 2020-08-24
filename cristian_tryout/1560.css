@@ -20,15 +20,15 @@
 #file {
 	color: #4a433e;
     min-height:100%;
-	padding-top: 200px;
-	padding-bottom: 320px;
+	padding-top: 150px;
+	padding-bottom: 240px;
 	padding-left: 120px;
 	padding-right: 120px;	
 	font-size: 15pt;
-	font-family: myHultogCoursive !important;
+	font-family: myHultog;
 	text-align: justify;
 	line-height: 1.5;
-	background-image: url("img/book.jpg") !important;
+	background-image: url("img/book.jpg");
 	background-position: center;
 	background-repeat: repeat;
 }
@@ -37,8 +37,8 @@
 #file h1 {
 	text-transform: uppercase;
 	text-align: center;
-	font-family: myHultogCoursive;
-    font-size: 34pt;
+	font-family: myHultog;
+    font-size: 26pt;
 	letter-spacing: 6px;
 }
 #file h2 {
@@ -46,11 +46,11 @@
 	text-align: center; 
 	text-transform: uppercase;
 	line-height: 1.5;
-	font-size: 21pt;
-	font-family:  myHultog !important;
+	font-size: 22pt;
+	font-family:  myHultogCoursive;
 	padding-bottom: 20px;
 }
-#file h3, #file h4, #file h5 {font-family:  myHultogCoursive;
+#file h3, #file h4, #file h5 {font-family:  myHultog;
 	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: 10px;
@@ -61,12 +61,11 @@
 }
 
 #CoverWrapper {
-	font-family: myHultog !important;
+	font-family: myHultogCoursive;
 	text-transform: uppercase;
 	text-align: center;
 	line-height: 1.5;
-	font-size: 23pt;
-	font-family:  myHultog;
+	font-size: 22pt;
 	padding-bottom: 125px;
 }
 #file img {
@@ -82,9 +81,9 @@
     margin-bottom: 15px;
 }
 
-#file p.pubnote {
+#file p.pubnote, #file #footerWrapper {
 	font-family: myHultogCoursive;
-	font-size:21pt;
+	font-size:13pt;
 	padding-bottom:10px;
 }
 #Credits > p:first-of-type::first-letter, #Summary > p:first-of-type::first-letter, #ContentWrapper > p:first-of-type::first-letter, #ContentWrapper h2 ~ p:first-of-type::first-letter {
@@ -104,29 +103,74 @@
 
 #file th {border: 1px solid #4a433e;
 	font-size: 15pt;
-	text-transform: uppercase !important;
+	text-transform: uppercase;
 	padding: 10px;
 
 }
 
 
 #file td {border: 1px solid #4a433e;
-	padding: 10px !important;
+	padding: 10px;
 }
 
 
 #file tr{
-	border: 1px solid #4a433e !important;
+	border: 1px solid #4a433e;
 }
 
 
-#file table {border: 4px solid !important;
+#file table {border: 4px solid;
 	margin-bottom: 25px;
 	margin-top: 25px;
-	word-break: break-word !important;
+	word-break: break-word;
 	margin-left: auto;
 	margin-right: auto;
 	color: #4a433e;
 	border-spacing: 1px;
-	border-collapse: separate !important;
+	border-collapse: separate;
+}
+#file a {
+	color: #4a433e;
+	font-family: myHultogCoursive;
+}
+
+	#file a:hover {
+		color: #4a433e;
+		font-family: myHultog;
+	}
+
+@media screen and (max-width: 950px) {
+	#file {
+		padding-top: 100px;
+		padding-bottom: 170px;
+		padding-left: 60px;
+		padding-right: 60px;
+		font-size: 13pt;
+	}
+		#file h1 {
+			font-size: 22pt;
+			letter-spacing: 4px;
+		}
+		#file h2 {
+			letter-spacing: 7px;
+			font-size: 17pt;
+		}
+		
+		#file h3, #file h4, #file h5 {
+			letter-spacing: 7px;
+			font-size: 13pt;
+		}
+	#CoverWrapper {
+		font-size: 17pt;
+		padding-bottom: 63px;
+	}
+	#Credits > p:first-of-type::first-letter, #Summary > p:first-of-type::first-letter, #ContentWrapper > p:first-of-type::first-letter, #ContentWrapper h2 ~ p:first-of-type::first-letter {
+		font-size: 60pt;
+		line-height: 60px;
+		padding-right: 6px;
+	}
+
+	#footerWrapper, #file p.pubnote {
+		font-size: 10pt;
+	}
 }
