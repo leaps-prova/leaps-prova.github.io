@@ -208,8 +208,7 @@ margin-bottom: 15px;
 
 @media screen and (max-width: 480px) {
     #file {
-        -webkit-column-count: 2; /* Chrome, Safari */
-        column-count: 2;
+        width:150%;
         padding:13px;
     }
  }
