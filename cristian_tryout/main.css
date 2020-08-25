@@ -21,6 +21,10 @@ body {
     display: block;
 }
 
+#selector {
+	padding-top:70px;
+	overflow-y: scroll;
+}
 #selector .list a {
     padding-top:25px;
 }
@@ -82,7 +86,7 @@ body {
     margin-left: auto;
     padding-top:25px;
     padding-bottom:25px;
-    overflow: scroll;
+    overflow-x: scroll;
     font-size:0.9em;
 }
 #occurrences {
