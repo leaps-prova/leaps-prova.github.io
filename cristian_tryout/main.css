@@ -23,7 +23,6 @@ body {
 
 #selector {
 	padding-top:70px;
-	overflow-y: scroll;
 }
 #selector .list a {
     padding-top:25px;
