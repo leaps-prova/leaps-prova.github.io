@@ -3,6 +3,9 @@ $("#styles").change(function() {
     var selectedStyle = $(this).children("option:selected").val();
     $("#ArticleCss").html("");
     $("#ArticleCss").load('' + selectedStyle + '.css');
+    if ( $(window).width() < 768 ) {
+        closeNav()
+    }
 });
 
 var expandCollapse = function(){
