@@ -8,6 +8,22 @@ $("#styles").change(function() {
     }
 });
 
+
+
+// ===== Scroll to Top ==== 
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});
+
 var expandCollapse = function(){
     if ( $(window).width() < 768 ) {
         $(function(){
@@ -135,6 +151,10 @@ function fillToCTab(what, style, where) {
             place: '#' + elements[i].id,
             content: elements[i].innerHTML
         }));
+        if (style == 'figure') {
+            var imgurl = $('#file figure img').eq(i).attr('src');
+            $('.figure-widget').eq(i).append('<a href="' + imgurl +'" target ="_blank">View original</a>');
+        }
     }
 }
 
