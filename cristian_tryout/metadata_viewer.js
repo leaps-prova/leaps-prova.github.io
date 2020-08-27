@@ -168,6 +168,10 @@ function fillVisualContentTab(what, style, where) {
                 what: style,
                 content: elements[i].innerHTML
             }));
+            if (style == 'figure') {
+                var imgurl = $('#file figure img').eq(i).attr('src');
+                $('.figure-widget').eq(i).append('<a href="' + imgurl +'" target ="_blank">View original</a>');
+            }
         }
     }
     else {
