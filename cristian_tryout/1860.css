@@ -56,8 +56,8 @@
     text-transform: uppercase;
     text-align: center;
     font-size:15pt;
-    padding-top:10px;
-    padding-bottom:10px;
+    padding-top:1em;
+    padding-bottom:1em;
 }
 #file h3, #file h4, #file h5 {
     font-family: 'MyBodoniCondensed';
@@ -65,6 +65,8 @@
     letter-spacing: 1.5px; 
     text-transform: uppercase;
     text-align:center;
+    padding-top:0.9em;
+    padding-bottom:0.9em;
 }
   
 #CoverWrapper {
@@ -73,11 +75,12 @@
     font-size: 15pt;
     letter-spacing: 1.5pt; 
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 1em;
 }
 #CoverWrapper p {
     display:inline;
-    padding-right: 8px;
+    word-break: break-all;
+    hyphens: auto;
 }
 #ContentWrapper {
     line-height: 0.9;
@@ -92,7 +95,7 @@
 #ContentWrapper p:first-of-type{
     text-indent: 0em;
 }
-#Credits > p:first-of-type::first-letter, #Summary > p:first-of-type::first-letter, #ContentWrapper .myFirstletter, #ContentWrapper > p:first-of-type::first-letter, #ContentWrapper h2 ~ p:first-of-type::first-letter {
+#ContentWrapper .myFirstletter, #ContentWrapper h2 ~ p:first-of-type::first-letter {
     font-size: 30pt;
     float:left;
     line-height: 30px;
@@ -156,9 +159,11 @@
 font-family: myBodoniCondensed;
 margin-top: 15px;
 margin-bottom: 15px;
+line-height: 1;
 }
 #file .myPubnote p, #file #footerWrapper p {
     margin:0px;
+    text-indent:0em;
 }
 #file a {
     color: #241B12;
@@ -188,7 +193,7 @@ margin-bottom: 15px;
         font-size: 13pt;
     }
 
-    #Credits > p:first-of-type::first-letter, #Summary > p:first-of-type::first-letter, #ContentWrapper .myFirstletter, #ContentWrapper > p:first-of-type::first-letter, #ContentWrapper h2 ~ p:first-of-type::first-letter {
+    #ContentWrapper .myFirstletter, #ContentWrapper h2 ~ p:first-of-type::first-letter {
         font-size: 24pt;
         line-height: 24pt;
     }

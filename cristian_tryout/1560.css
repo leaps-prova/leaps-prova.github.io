@@ -83,7 +83,7 @@
     margin-bottom: 15px;
 }
 
-#file p.pubnote, #file #footerWrapper, #file .myPubnote {
+#file #footerWrapper, #file .myPubnote {
 	padding-left: 88px;
 	padding-right: 88px;
 	font-family: myHultogCoursive;
@@ -95,7 +95,7 @@
 	font-family: myHultogCoursive;
 	text-transform: uppercase;
 }
-#ContentWrapper .myFirstletter, #ContentWrapper > p:first-of-type::first-letter, #ContentWrapper h2 ~ p:first-of-type::first-letter {
+#ContentWrapper .myFirstletter, #ContentWrapper h2 ~ p:first-of-type::first-letter {
 	font-family: myCaps;
 	float: left;
 	font-size: 90pt;
@@ -159,7 +159,7 @@
 		padding-right: 200px;
 		padding-bottom: 340px;
 	}
-	#file .myPubnote, #file #footerWrapper, #file p.pubnote {
+	#file .myPubnote, #file #footerWrapper {
 		padding-left:118px;
 		padding-right:118px;
 		padding-bottom: 69px;
@@ -195,13 +195,13 @@
 		font-size: 17pt;
 		padding-bottom: 59px;
 	}
-	#ContentWrapper .myFirstletter, #ContentWrapper > p:first-of-type::first-letter, #ContentWrapper h2 ~ p:first-of-type::first-letter {
+	#ContentWrapper .myFirstletter, #ContentWrapper h2 ~ p:first-of-type::first-letter {
 		font-size: 60pt;
 		line-height: 60px;
 		padding-right: 6px;
 	}
 
-	#file #footerWrapper, #file p.pubnote, #file .myPubnote {
+	#file #footerWrapper, #file .myPubnote {
 		font-size: 11pt;
 		padding-left: 59px;
 		padding-right: 59px;
@@ -218,7 +218,7 @@
 	#CoverWrapper {
 		padding-bottom: 35px;
 	}
-	#file #footerWrapper, #file p.pubnote, #file .myPubnote {
+	#file #footerWrapper, #file .myPubnote {
 		padding-left: 35px;
 		padding-right: 35px;
 		padding-bottom: 21px;
