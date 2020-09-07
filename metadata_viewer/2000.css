@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200&display=swap');
+
+#ArticleBody {
+		/** container **/
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	margin-right: 3rem;
+	margin-left: 3rem;
+		/** end of the container **/
+	font-family: 'Source Serif Pro', serif !important;
+	font-weight: 550 !important;
+	text-align:justify;
+	column-count: 4;
+	column-gap:1.5%;
+}
+
+#ArticleBody h1 {
+	font-family: 'Questrial', sans-serif !important;
+	font-weight: 200 !important;
+	letter-spacing: 0.002em;
+	text-transform: lowercase;
+	font-size: 4em;
+	line-height: 0.8em;
+	margin-bottom: 0rem;
+	column-span: all;
+}
+
+#ArticleBody h2 {
+	font-family: 'Barlow Semi Condensed', sans-serif !important;
+	letter-spacing: 0.002em;
+	line-height: 0.9em;
+	font-size: 2em;
+/**	margin-left: 1.5em; **/
+}
+
+#ArticleBody h3, #ArticleBody h4, #ArticleBody h5 {
+	font-family: 'Barlow Semi Condensed', sans-serif !important;
+	letter-spacing: 0.002em;
+	line-height: 0.9em;
+	font-size: 1em;
+	margin-left: 2%;
+}
+
+#CoverWrapper {
+	font-family: 'Questrial', sans-serif !important;
+	text-transform: lowercase;
+	column-span:all;
+}
+
+#Cover .byline {
+	font-family: 'Questrial', sans-serif;
+	line-height: 0.5em;
+	margin-left: 1.5em;
+	/** border-top: dashed 2px black;
+	border-bottom: dashed 2px black; **/
+}
+
+#Credits {
+	font-family: 'Questrial', sans-serif;
+	line-height: 1em;
+	border-top: dashed 2px black;
+	border-bottom: dashed 2px black;
+	margin-bottom: 1.5em;
+	width: 110%;
+}
+
+#Summary 
+{
+	font-family: 'Questrial', sans-serif;
+	line-height: 1em;
+	border-top: dashed 2px black;
+	border-bottom: dashed 2px black;
+	margin-bottom: 1.5em;
+}
+
+
+#Introduction p:first-of-type::first-letter, #ContentWrapper > p:first-of-type::first-letter, #ContentWrapper h2 ~ p:first-of-type::first-letter {
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-size: 13em;
+	color: #ff3399;
+/**	font-style: oblique; **/
+	float:left;
+	shape-outside: unset(100px 100px 100px 100px);
+/**	padding-right: 0.2em; **/
+	line-height: 0.71em; 
+
+}
+
+figure {
+	background-color: #ff3399;
+	float:left;
+}
+
+img {
+    max-width: 96%;
+    max-height: 96%;
+	margin: 2em 0em 2em 0em;
+	float:center; 
+	background-color: #ff3399;
+	padding: 2%; 
+}
+
+figcaption {
+	font-size: 0.8em;
+	background-color: #ff3399;
+	color: white;
+	padding: 2%;
+}
+
+figcaption .num {
+	font-weight: bold;
+}
+
+#Articlebody table {
+	border: 2px solid #b3b3b3;
+	width:100%;
+	height:100%;
+	margin-bottom: 5%;
+	margin-top: 5%;
+	word-break: break-word;
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 1px;
+	border-collapse: collapse;
+}
+
+#Articlebody th, td {
+	border: 1px solid #b3b3b3;
+	padding:2%;
+}
+
+table caption {
+	font-size: 0.8em;
+	text-align:justify;
+	line-height: 1em;
+}
+
+table caption .num {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+#References p {
+	font-size:0.9em;
+}
+
+#References p .biblioMarker {
+	font-weight: bold;
+}
