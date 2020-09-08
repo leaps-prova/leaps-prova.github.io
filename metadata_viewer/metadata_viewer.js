@@ -213,9 +213,9 @@ function loadArticle(file) {
     $('#paginationLinks').css('display', 'block');
     var prev_file = getPrevious(file);
     var next_file = getNext(file);
-    $('#paginationLinks .previous').attr("onclick","loadArticle("+prev_file+")");
-    $('#paginationLinks .next').attr("onclick","loadArticle("+next_file+")");
-    
+    $('#paginationLinks .previous').attr("onclick","loadArticle('"+prev_file+"')");
+    $('#paginationLinks .next').attr("onclick","loadArticle('"+next_file+"')");
+
     $.ajax({
         method: 'GET',
         url: file,
