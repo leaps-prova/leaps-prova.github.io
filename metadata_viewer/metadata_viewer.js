@@ -95,25 +95,39 @@ function main() {
         <p class="coverAuthor">$author</p>
         <p class="coverIssued">$issued</p>
         <p class="coverSource"><a href="$source" target="_blank">$source</a></p></div>`;
-    $.ajax({
-        method: 'GET',
-        url: 'filelist.json',
-        success: function (d) {
-            ajaxResult.push(d);
-            for (var i = 0; i < d.length; i++) {
-                $('#IssueIndex').append(ArticleInfo.tpl({
-                    url: d[i].url,
-                    label: d[i].label,
-                    author: d[i].author,
-                    issued: d[i].issued,
-                    source: d[i].source
-                }));
-            }
-        },
-        error: function () {
-            alert('No document to show')
+    if (ajaxResult.length == 1) {
+        articlesArray = ajaxResult[0];
+        for (var i = 0; i < articlesArray.length; i++) {
+            $('#IssueIndex').append(ArticleInfo.tpl({
+                url: articlesArray[i].url,
+                label: articlesArray[i].label,
+                author: articlesArray[i].author,
+                issued: articlesArray[i].issued,
+                source: articlesArray[i].source
+            }));
         }
-    });
+    }
+    else {
+        $.ajax({
+            method: 'GET',
+            url: 'filelist.json',
+            success: function (d) {
+                ajaxResult.push(d);
+                for (var i = 0; i < d.length; i++) {
+                    $('#IssueIndex').append(ArticleInfo.tpl({
+                        url: d[i].url,
+                        label: d[i].label,
+                        author: d[i].author,
+                        issued: d[i].issued,
+                        source: d[i].source
+                    }));
+                }
+            },
+            error: function () {
+                alert('No document to show')
+            }
+        });
+    }  
 }
 
 function load(file) {
@@ -121,6 +135,8 @@ function load(file) {
     $('#metadataViewer').empty();
     $('#paginationLinks').css('display', 'block');
     $('.coverLink').css('display', 'block');
+    getPrevious(file);
+    getNext(file);
     $.ajax({
         method: 'GET',
         url: 'metadata_viewer.html',
@@ -131,8 +147,6 @@ function load(file) {
                 url: file,
                 success: function (d) {
                     $('#file').html(d);
-                    getPrevious(file);
-                    getNext(file);
                     addIds();
                     fillInfo('#file', '#info');
                     fillTabs();
@@ -149,10 +163,11 @@ function load(file) {
 }
 function getPrevious(file) {
     $('#paginationLinks .previous').removeAttr('style');
-    for (var i = 0; i < ajaxResult[0].length; i++) {
-        if (ajaxResult[0][i].url == file) {
+    articlesArray = ajaxResult[0];
+    for (var i = 0; i < articlesArray.length; i++) {
+        if (articlesArray[i].url == file) {
             if (i - 1 >= 0) {
-                var prev_file = ajaxResult[0][i - 1].url;
+                var prev_file = articlesArray[i - 1].url;
                 $('#paginationLinks .previous').on("click", function () {
                     load(prev_file);
                 });
@@ -166,10 +181,11 @@ function getPrevious(file) {
 
 function getNext(file) {
     $('#paginationLinks .next').removeAttr('style');
-    for (var i = 0; i < ajaxResult[0].length; i++) {
-        if (ajaxResult[0][i].url == file) {
-            if (i + 1 < ajaxResult[0].length) {
-                var next_file = ajaxResult[0][i + 1].url;
+    articlesArray = ajaxResult[0];
+    for (var i = 0; i < articlesArray.length; i++) {
+        if (articlesArray[i].url == file) {
+            if (i + 1 < articlesArray.length) {
+                var next_file = articlesArray[i + 1].url;
                 $('#paginationLinks .next').on("click", function () {
                     load(next_file);
                 });
