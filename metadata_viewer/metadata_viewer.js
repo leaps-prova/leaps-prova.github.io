@@ -131,8 +131,8 @@ function load(file) {
                 url: file,
                 success: function (d) {
                     $('#file').html(d);
-                    getPrevious(file);
-                    getNext(file);
+                    getPrevious(file, ajaxResult);
+                    getNext(file, ajaxResult);
                     addIds();
                     fillInfo('#file', '#info');
                     fillTabs();
@@ -147,36 +147,38 @@ function load(file) {
         }
     });
 }
-function getPrevious(file) {
+function getPrevious(file, articlesArray) {
     $('#paginationLinks .previous').removeAttr('style');
-    for (var i = 0; i < ajaxResult.length; i++) {
-        if (ajaxResult[i].url == file) {
+    for (var i = 0; i < articlesArray.length; i++) {
+        if (articlesArray[i].url == file) {
             if (i - 1 >= 0) {
-                var prev_file = ajaxResult[i - 1].url;
+                var prev_file = articlesArray[i - 1].url;
                 console.log(prev_file);
                 $('#paginationLinks .previous').on("click", function () {
                     load(prev_file);
                 });
             }
             else {
+                console.log(file)
                 $('#paginationLinks .previous').css('display', 'none');
             }
         }
     }
 }
 
-function getNext(file) {
+function getNext(file, articlesArray) {
     $('#paginationLinks .next').removeAttr('style');
-    for (var i = 0; i < ajaxResult.length; i++) {
-        if (ajaxResult[i].url == file) {
-            if (i + 1 < ajaxResult.length) {
-                var next_file = ajaxResult[i + 1].url;
+    for (var i = 0; i < articlesArray.length; i++) {
+        if (articlesArray[i].url == file) {
+            if (i + 1 < articlesArray.length) {
+                var next_file = articlesArray[i + 1].url;
                 console.log(next_file);
                 $('#paginationLinks .next').on("click", function () {
                     load(next_file);
                 });
             }
             else {
+                console.log(file)
                 $('#paginationLinks .next').css('display', 'none');
             }
         }
