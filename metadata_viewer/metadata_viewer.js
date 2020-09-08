@@ -131,8 +131,8 @@ function load(file) {
                 url: file,
                 success: function (d) {
                     $('#file').html(d);
-                    getPrevious(file, ajaxResult);
-                    getNext(file, ajaxResult);
+                    getPrevious(file);
+                    getNext(file);
                     addIds();
                     fillInfo('#file', '#info');
                     fillTabs();
@@ -147,38 +147,36 @@ function load(file) {
         }
     });
 }
-function getPrevious(file, articlesArray) {
+function getPrevious(file) {
     $('#paginationLinks .previous').removeAttr('style');
-    for (var i = 0; i < articlesArray.length; i++) {
-        if (articlesArray[i].url == file) {
+    for (var i = 0; i < ajaxResult.length; i++) {
+        console.log(ajaxResult[i].url)
+        console.log(file)
+        if (ajaxResult[i].url == file) {
             if (i - 1 >= 0) {
-                var prev_file = articlesArray[i - 1].url;
-                console.log(prev_file);
+                var prev_file = ajaxResult[i - 1].url;
                 $('#paginationLinks .previous').on("click", function () {
                     load(prev_file);
                 });
             }
             else {
-                console.log(file)
                 $('#paginationLinks .previous').css('display', 'none');
             }
         }
     }
 }
 
-function getNext(file, articlesArray) {
+function getNext(file) {
     $('#paginationLinks .next').removeAttr('style');
-    for (var i = 0; i < articlesArray.length; i++) {
-        if (articlesArray[i].url == file) {
-            if (i + 1 < articlesArray.length) {
-                var next_file = articlesArray[i + 1].url;
-                console.log(next_file);
+    for (var i = 0; i < ajaxResult.length; i++) {
+        if (ajaxResult[i].url == file) {
+            if (i + 1 < ajaxResult.length) {
+                var next_file = ajaxResult[i + 1].url;
                 $('#paginationLinks .next').on("click", function () {
                     load(next_file);
                 });
             }
             else {
-                console.log(file)
                 $('#paginationLinks .next').css('display', 'none');
             }
         }
