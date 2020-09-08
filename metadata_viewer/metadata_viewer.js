@@ -150,6 +150,7 @@ function load(file) {
 function getPrevious(file) {
     $('#paginationLinks .previous').removeAttr('style');
     for (var i = 0; i < ajaxResult.length; i++) {
+        console.log(ajaxResult)
         console.log(ajaxResult.length)
         console.log(ajaxResult[i].url)
         console.log(file)
