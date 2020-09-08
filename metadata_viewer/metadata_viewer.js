@@ -199,10 +199,11 @@ function getPrevious(file) {
     $('#paginationLinks .previous').removeAttr('style');
     articlesArray = ajaxResult[0];
     for (var i = 0; i < articlesArray.length; i++) {
-        if (articlesArray[i].url == file) {
+        if (articlesArray[i].url === file) {
             if (i - 1 >= 0) {
                 var prev_file = articlesArray[i - 1].url;
-                $('#paginationLinks .previous').on("click", function () {
+                $('#paginationLinks .previous').on("click", function (e) {
+                    e.preventDefault();
                     loadArticle(prev_file);
                 });
             }
@@ -217,10 +218,11 @@ function getNext(file) {
     $('#paginationLinks .next').removeAttr('style');
     articlesArray = ajaxResult[0];
     for (var i = 0; i < articlesArray.length; i++) {
-        if (articlesArray[i].url == file) {
+        if (articlesArray[i].url === file) {
             if (i + 1 < articlesArray.length) {
                 var next_file = articlesArray[i + 1].url;
-                $('#paginationLinks .next').on("click", function () {
+                $('#paginationLinks .next').on("click", function (e) {
+                    e.preventDefault();
                     loadArticle(next_file);
                 });
             }
