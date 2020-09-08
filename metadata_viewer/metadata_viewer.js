@@ -215,6 +215,9 @@ function loadArticle(file) {
     var next_file = getNext(file);
     $('#paginationLinks .previous').attr("onclick","loadArticle('"+prev_file+"')");
     $('#paginationLinks .next').attr("onclick","loadArticle('"+next_file+"')");
+    if ($(window).width() < 768) {
+        closeNav()
+    }
 
     $.ajax({
         method: 'GET',
