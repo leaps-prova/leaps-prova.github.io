@@ -91,7 +91,7 @@ function main() {
 
     
     var ArticleInfo = `<div class="ArticleInfo">
-        <p class="coverLabel"><a href='#' onclick='load("$url")'>$label</a></p>
+        <p class="coverLabel"><a href='#' onclick='loadArticle("$url")'>$label</a></p>
         <p class="coverAuthor">$author</p>
         <p class="coverIssued">$issued</p>
         <p class="coverSource"><a href="$source" target="_blank">$source</a></p></div>`;
@@ -130,7 +130,7 @@ function main() {
     }  
 }
 
-function load(file) {
+function loadArticle(file) {
     $('#file').empty();
     $('#metadataViewer').empty();
     $('#paginationLinks').css('display', 'block');
@@ -203,7 +203,7 @@ function getPrevious(file) {
             if (i - 1 >= 0) {
                 var prev_file = articlesArray[i - 1].url;
                 $('#paginationLinks .previous').on("click", function () {
-                    load(prev_file);
+                    loadArticle(prev_file);
                 });
             }
             else {
@@ -221,7 +221,7 @@ function getNext(file) {
             if (i + 1 < articlesArray.length) {
                 var next_file = articlesArray[i + 1].url;
                 $('#paginationLinks .next').on("click", function () {
-                    load(next_file);
+                    loadArticle(next_file);
                 });
             }
             else {
