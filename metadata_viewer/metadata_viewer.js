@@ -166,6 +166,7 @@ function getPrevious(file) {
 
 function getNext(file) {
     $('#paginationLinks .next').removeAttr('style');
+    console.log(ajaxResult);
     for (var i = 0; i < ajaxResult.length; i++) {
         if (ajaxResult[i].url == file) {
             if (i + 1 < ajaxResult.length) {
