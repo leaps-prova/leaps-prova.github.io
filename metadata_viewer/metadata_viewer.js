@@ -129,72 +129,6 @@ function main() {
         });
     }  
 }
-
-function loadArticle(file) {
-    $('#file').empty();
-    $('#metadataViewer').empty();
-    $('#paginationLinks').css('display', 'block');
-    $('.coverLink').css('display', 'block');
-    getPrevious(file);
-    getNext(file);
-    
-    $('#metadataViewer').append(` <div class="row clearfix mt-3">
-    <div class="col-md-12">
-        <ul class="nav nav-tabs" id="leftTab" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="true">Info</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="toc-tab" data-toggle="tab" href="#toc" role="tab" aria-controls="view" aria-selected="true">Table of Content</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="visual-tab" data-toggle="tab" href="#visual" role="tab" aria-controls="view" aria-selected="true">Figures & Tables</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="entities-tab" data-toggle="tab" href="#entities" role="tab" aria-controls="view" aria-selected="true">Named Entities</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="references-tab" data-toggle="tab" href="#references" role="tab" aria-controls="view" aria-selected="true">References</a>
-            </li>
-        </ul>
-        <div class="tab-content" id="leftContent">
-            <div class="tab-pane active myBorder myBorder-notop" id="info" role="tabpanel" aria-labelledby="info-tab">
-            </div>
-            <div class="tab-pane myBorder myBorder-notop" id="toc" role="tabpanel" aria-labelledby="toc-tab">
-                <ul class="minimal"></ul>
-            </div>
-            <div class="tab-pane myBorder myBorder-notop" id="visual" role="tabpanel" aria-labelledby="visual-tab">
-            </div>
-            <div class="tab-pane myBorder myBorder-notop" id="entities" role="tabpanel" aria-labelledby="entities-tab">
-            </div>
-            <div class="tab-pane myBorder myBorder-notop" id="references" role="tabpanel" aria-labelledby="references-tab">
-                <ul class="minimal"></ul>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row clearfix mt-4">
-    <div class="col-md-12" id="occurrences">
-        <h5></h5>
-        <ul class="minimal"></ul>
-        <a id="wikiLink" href="#" target="_blank"></a>
-    </div>
-</div>`);
-
-    $.ajax({
-        method: 'GET',
-        url: file,
-        success: function (d) {
-            $('#file').html(d);
-            addIds();
-            fillInfo('#file', '#info');
-            fillTabs();
-        },
-        error: function () {
-            alert('Could not load ' + file)
-        }
-    });
-}
 function getPrevious(file) {
     $('#paginationLinks .previous').removeAttr('style');
     articlesArray = ajaxResult[0];
@@ -202,10 +136,7 @@ function getPrevious(file) {
         if (articlesArray[i].url === file) {
             if (i - 1 >= 0) {
                 var prev_file = articlesArray[i - 1].url;
-                $('#paginationLinks .previous').on("click", function (e) {
-                    e.preventDefault();
-                    loadArticle(prev_file);
-                });
+                return prev_file
             }
             else {
                 $('#paginationLinks .previous').css('display', 'none');
@@ -221,10 +152,7 @@ function getNext(file) {
         if (articlesArray[i].url === file) {
             if (i + 1 < articlesArray.length) {
                 var next_file = articlesArray[i + 1].url;
-                $('#paginationLinks .next').on("click", function (e) {
-                    e.preventDefault();
-                    loadArticle(next_file);
-                });
+                return next_file
             }
             else {
                 $('#paginationLinks .next').css('display', 'none');
@@ -232,6 +160,77 @@ function getNext(file) {
         }
     }
 }
+
+function loadArticle(file) {
+    $('#file').empty();
+    $('#metadataViewer').empty();
+    $('.coverLink').css('display', 'block');
+    
+    
+    $('#metadataViewer').append(` <div class="row clearfix mt-3">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs" id="leftTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="true">Info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="toc-tab" data-toggle="tab" href="#toc" role="tab" aria-controls="view" aria-selected="true">Table of Content</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="visual-tab" data-toggle="tab" href="#visual" role="tab" aria-controls="view" aria-selected="true">Figures & Tables</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="entities-tab" data-toggle="tab" href="#entities" role="tab" aria-controls="view" aria-selected="true">Named Entities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="references-tab" data-toggle="tab" href="#references" role="tab" aria-controls="view" aria-selected="true">References</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="leftContent">
+                <div class="tab-pane active myBorder myBorder-notop" id="info" role="tabpanel" aria-labelledby="info-tab">
+                </div>
+                <div class="tab-pane myBorder myBorder-notop" id="toc" role="tabpanel" aria-labelledby="toc-tab">
+                    <ul class="minimal"></ul>
+                </div>
+                <div class="tab-pane myBorder myBorder-notop" id="visual" role="tabpanel" aria-labelledby="visual-tab">
+                </div>
+                <div class="tab-pane myBorder myBorder-notop" id="entities" role="tabpanel" aria-labelledby="entities-tab">
+                </div>
+                <div class="tab-pane myBorder myBorder-notop" id="references" role="tabpanel" aria-labelledby="references-tab">
+                    <ul class="minimal"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row clearfix mt-4">
+        <div class="col-md-12" id="occurrences">
+            <h5></h5>
+            <ul class="minimal"></ul>
+            <a id="wikiLink" href="#" target="_blank"></a>
+        </div>
+    </div>`);
+
+    $('#paginationLinks').css('display', 'block');
+    var prev_file = getPrevious(file);
+    var next_file = getNext(file);
+    $('#paginationLinks .previous').attr("onclick","loadArticle("+prev_file+")");
+    $('#paginationLinks .next').attr("onclick","loadArticle("+next_file+")");
+    
+    $.ajax({
+        method: 'GET',
+        url: file,
+        success: function (d) {
+            $('#file').html(d);
+            addIds();
+            fillInfo('#file', '#info');
+            fillTabs();
+        },
+        error: function () {
+            alert('Could not load ' + file)
+        }
+    });
+}
+
 function addIds() {
     addId('#file .person', 'person')
     addId('#file .place', 'place')
