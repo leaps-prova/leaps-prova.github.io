@@ -149,14 +149,10 @@ function load(file) {
 }
 function getPrevious(file) {
     $('#paginationLinks .previous').removeAttr('style');
-    for (var i = 0; i < ajaxResult.length; i++) {
-        console.log(ajaxResult)
-        console.log(ajaxResult.length)
-        console.log(ajaxResult[i].url)
-        console.log(file)
-        if (ajaxResult[i].url == file) {
+    for (var i = 0; i < ajaxResult[0].length; i++) {
+        if (ajaxResult[0][i].url == file) {
             if (i - 1 >= 0) {
-                var prev_file = ajaxResult[i - 1].url;
+                var prev_file = ajaxResult[0][i - 1].url;
                 $('#paginationLinks .previous').on("click", function () {
                     load(prev_file);
                 });
@@ -170,10 +166,10 @@ function getPrevious(file) {
 
 function getNext(file) {
     $('#paginationLinks .next').removeAttr('style');
-    for (var i = 0; i < ajaxResult.length; i++) {
-        if (ajaxResult[i].url == file) {
-            if (i + 1 < ajaxResult.length) {
-                var next_file = ajaxResult[i + 1].url;
+    for (var i = 0; i < ajaxResult[0].length; i++) {
+        if (ajaxResult[0][i].url == file) {
+            if (i + 1 < ajaxResult[0].length) {
+                var next_file = ajaxResult[0][i + 1].url;
                 $('#paginationLinks .next').on("click", function () {
                     load(next_file);
                 });
