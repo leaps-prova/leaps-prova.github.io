@@ -67,6 +67,8 @@ $(document).ready(expandCollapse);
 $(document).ready(main);
 $(window).resize(expandCollapse);
 
+var ajaxResult=[];
+
 function main() {
     $('#metadataViewer').empty();
     $('#issueInfo').empty();
@@ -97,6 +99,7 @@ function main() {
         method: 'GET',
         url: 'filelist.json',
         success: function (d) {
+            ajaxResult.push(d);
             for (var i = 0; i < d.length; i++) {
                 $('#IssueIndex').append(ArticleInfo.tpl({
                     url: d[i].url,
@@ -146,54 +149,36 @@ function load(file) {
 }
 function getPrevious(file) {
     $('#paginationLinks .previous').removeAttr('style');
-    $.ajax({
-        method: 'GET',
-        url: 'filelist.json',
-        success: function (d) {
-            for (var i = 0; i < d.length; i++) {
-                if (d[i].url == file) {
-                    if (i - 1 >= 0) {
-                        var prev_file = d[i - 1].url;
-                        $('#paginationLinks .previous').on("click", function () {
-                            load(prev_file);
-                        });
-                    }
-                    else {
-                        $('#paginationLinks .previous').css('display', 'none');
-                    }
-                }
+    for (var i = 0; i < ajaxResult.length; i++) {
+        if (ajaxResult[i].url == file) {
+            if (i - 1 >= 0) {
+                var prev_file = ajaxResult[i - 1].url;
+                $('#paginationLinks .previous').on("click", function () {
+                    load(prev_file);
+                });
             }
-        },
-        error: function () {
-            alert('Could not load previous document')
+            else {
+                $('#paginationLinks .previous').css('display', 'none');
+            }
         }
-    });
+    }
 }
 
 function getNext(file) {
     $('#paginationLinks .next').removeAttr('style');
-    $.ajax({
-        method: 'GET',
-        url: 'filelist.json',
-        success: function (d) {
-            for (var i = 0; i < d.length; i++) {
-                if (d[i].url == file) {
-                    if (i + 1 < d.length) {
-                        var next_file = d[i + 1].url;
-                        $('#paginationLinks .next').on("click", function () {
-                            load(next_file);
-                        });
-                    }
-                    else {
-                        $('#paginationLinks .next').css('display', 'none');
-                    }
-                }
+    for (var i = 0; i < ajaxResult.length; i++) {
+        if (ajaxResult[i].url == file) {
+            if (i + 1 < ajaxResult.length) {
+                var next_file = ajaxResult[i + 1].url;
+                $('#paginationLinks .next').on("click", function () {
+                    load(next_file);
+                });
             }
-        },
-        error: function () {
-            alert('Could not load next document')
+            else {
+                $('#paginationLinks .next').css('display', 'none');
+            }
         }
-    });
+    }
 }
 function addIds() {
     addId('#file .person', 'person')
