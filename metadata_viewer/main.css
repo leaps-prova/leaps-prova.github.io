@@ -155,13 +155,9 @@ body {
 }
 
 .openbtn {
-    position: absolute;
-    top:70px;
-    left:0;
     font-size:30px; 
     cursor:pointer;
     display: none;/*value will change via javascript*/
-    z-index: 1;
 }
 
 

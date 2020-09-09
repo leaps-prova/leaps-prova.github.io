@@ -61,6 +61,7 @@
     column-gap: 20px;
     -webkit-column-rule: 1px solid; /* Chrome, Safari */
     column-rule: 1px solid;
+    column-fill:balance;
 }
 
 .ArticleInfo{
@@ -304,6 +305,7 @@ line-height: 1;
     }
     #IssueIndex h1 {
         letter-spacing: 5px;
+        font-size:70px;
     }
     #IssueBibliographicCitation {
         letter-spacing: 7px;
@@ -352,6 +354,10 @@ line-height: 1;
  }
 
 @media screen and (max-width: 480px) {
+
+    #IssueIndex h1 {
+        font-size:60px;
+    }
 
     #IssueIndex{
         column-count: 1;
