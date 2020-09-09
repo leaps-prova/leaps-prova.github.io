@@ -94,7 +94,7 @@
 	font-family: myHultogCoursive;
 	text-transform: uppercase;
 }
-#ContentWrapper .myFirstletter, #ContentWrapper h2 + p:first-of-type::first-letter, #ContentWrapper h2 ~ p:first-of-type::first-letter {
+#ContentWrapper .myFirstletter, #ContentWrapper h2 + p::first-letter, #ContentWrapper h2 ~ p:first-of-type::first-letter {
 	font-family: myCaps;
 	float: left;
 	font-size: 90pt;
@@ -254,7 +254,7 @@
 		padding-bottom: 59px;
 	}
 
-	#ContentWrapper .myFirstletter, #ContentWrapper h2 ~ p:first-of-type::first-letter, #ContentWrapper h2 + p:first-of-type::first-letter {
+	#ContentWrapper .myFirstletter, #ContentWrapper h2 ~ p:first-of-type::first-letter, #ContentWrapper h2 + p::first-letter {
 		font-size: 60pt;
 		line-height: 60px;
 		padding-right: 6px;
