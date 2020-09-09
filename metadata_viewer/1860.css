@@ -77,7 +77,7 @@
     display:block;
     padding-top:1em;
     padding-bottom:1em;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .ArticleInfo p.coverLabel {
