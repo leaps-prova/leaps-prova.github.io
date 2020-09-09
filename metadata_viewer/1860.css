@@ -303,7 +303,7 @@ line-height: 1;
         padding:24px;
         font-size:12pt;
     }
-    #IssueIndex h1 {
+    #IssueCover h1 {
         letter-spacing: 5px;
         font-size:70px;
     }
@@ -355,8 +355,8 @@ line-height: 1;
 
 @media screen and (max-width: 480px) {
 
-    #IssueIndex h1 {
-        font-size:30px;
+    #IssueCover h1 {
+        font-size:60px;
     }
 
     #IssueIndex{
