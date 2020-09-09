@@ -65,7 +65,6 @@
     column-gap: 20px;
     -webkit-column-rule: 1px solid; /* Chrome, Safari */
     column-rule: 1px solid;
-    column-fill:balance;
 }
 
 .ArticleInfo{
