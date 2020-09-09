@@ -19,12 +19,16 @@
     font-family: myBodoniCondensed;
 	src: url(font/bod_cr.ttf);
 }
-/* COVER */
 
-#IssueCover {
+#file {
     padding: 30px; 
     min-height:100vh;
     background-image: url("img/newspaper3.jpg");
+}
+
+/* COVER */
+
+#IssueCover {
     text-align: justify;
     font-family: myBodoni;
     font-size:15pt;
@@ -128,9 +132,6 @@
 /*ARTICLE*/
     
 #ArticleBody {
-    padding: 30px; 
-    min-height:100vh;
-    background-image: url("img/newspaper3.jpg");
     text-align: justify;
     -webkit-column-count: 3; /* Chrome, Safari */
     column-count: 3;
@@ -356,7 +357,7 @@ line-height: 1;
 @media screen and (max-width: 480px) {
 
     #IssueIndex h1 {
-        font-size:60px;
+        font-size:40px;
     }
 
     #IssueIndex{
