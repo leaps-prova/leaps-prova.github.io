@@ -83,6 +83,7 @@
 .ArticleInfo p.coverLabel {
     clear:both;
     font-size:1.1em;
+    padding-bottom:0.5em;
 }
 .ArticleInfo p.coverLabel a{
     font-family: myFhaCondensed;
@@ -95,6 +96,7 @@
 .ArticleInfo p:not(.coverLabel) {
    float:left;
    padding-right:5px;
+   padding-bottom: 0.2em;
 }
 
 .ArticleInfo p.coverSource {
