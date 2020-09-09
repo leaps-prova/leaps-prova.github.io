@@ -61,14 +61,6 @@
 	line-height: 1.5;
 }
 
-#CoverWrapper {
-	font-family: myHultog;
-	text-transform: uppercase;
-	text-align: center;
-	line-height: 1.5;
-	font-size: 22pt;
-	padding-bottom: 88px;
-}
 
 #file img {
     max-width: 100%;
@@ -82,8 +74,15 @@
 	margin-top: 15px;
     margin-bottom: 15px;
 }
-
-#file #footerWrapper, #file .myPubnote {
+#CoverWrapper {
+	font-family: myHultog;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1.5;
+	font-size: 22pt;
+	padding-bottom: 88px;
+}
+#footerWrapper, #file .myPubnote {
 	padding-left: 88px;
 	padding-right: 88px;
 	font-family: myHultogCoursive;
@@ -95,7 +94,7 @@
 	font-family: myHultogCoursive;
 	text-transform: uppercase;
 }
-#ContentWrapper .myFirstletter, #ContentWrapper h2 ~ p:first-of-type::first-letter {
+#ContentWrapper .myFirstletter, #ContentWrapper h2 + p:first-of-type::first-letter, #ContentWrapper h2 ~ p:first-of-type::first-letter {
 	font-family: myCaps;
 	float: left;
 	font-size: 90pt;
@@ -153,17 +152,17 @@
 
 /* COVER */
 
-#file #IssueIndex {
+#IssueCover {
 	display:flex;
 	flex-direction:column;
 	justify-content:center;
 	text-transform:uppercase;
 }
-#file #IssueIndex h1 {
+#IssueCover h1 {
 	padding:0em;
 	font-family:myHultog;
 }
-#file .ArticleInfo {
+.ArticleInfo {
 	text-align: center;
 	line-height: 1.5;
 	font-size:22pt;
@@ -172,14 +171,14 @@
 	text-transform: uppercase;
 }
 
-	#file .ArticleInfo:first-of-type {
+	.ArticleInfo:first-of-type {
 		padding-top:1em;
 	}
-	#file .ArticleInfo p:not(.coverLabel) {
+	.ArticleInfo p:not(.coverLabel) {
 		display: none;
 	}
 
-#file .IssueBibliographicCitation {
+.IssueBibliographicCitation {
 	font-size:22pt;
 	font-family:myHultogCoursive;
 	order:99;
@@ -187,7 +186,7 @@
 	margin-bottom: 0;
 }
 
-	#file .IssueBibliographicCitation::before {
+	.IssueBibliographicCitation::before {
 		content: "";
 		background-image: url("img/durer_incisione.jpg");
 		background-size: 100% 100%;
@@ -241,7 +240,7 @@
 			font-size: 17pt;
 		}
 
-		#file .ArticleInfo, #file .IssueBibliographicCitation {
+		.ArticleInfo, .IssueBibliographicCitation {
 			font-size: 17px;
 		}
 
@@ -255,7 +254,7 @@
 		padding-bottom: 59px;
 	}
 
-	#ContentWrapper .myFirstletter, #ContentWrapper h2 ~ p:first-of-type::first-letter {
+	#ContentWrapper .myFirstletter, #ContentWrapper h2 ~ p:first-of-type::first-letter, #ContentWrapper h2 + p:first-of-type::first-letter {
 		font-size: 60pt;
 		line-height: 60px;
 		padding-right: 6px;
@@ -268,7 +267,7 @@
 		padding-bottom: 35px;
 	}
 
-	#file .IssueBibliographicCitation::before {
+	.IssueBibliographicCitation::before {
 		height: 220px;
 		width: 150px;
 	}

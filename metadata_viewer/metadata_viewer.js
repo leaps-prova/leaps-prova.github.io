@@ -86,8 +86,8 @@ function main() {
                 <p class="list author">`+ author + `</p>
 				<p class="list bibiographicCitation">` + bibliographicCitation + `</p>`);
 
-    $('#file').append(`<div id="IssueIndex"><h1>` + title + `</h1>
-                <p class="IssueBibliographicCitation">` + bibliographicCitation + `</p></div>`);
+    $('#file').append(`<div id="IssueCover"><h1>` + title + `</h1>
+                <p class="IssueBibliographicCitation">` + bibliographicCitation + `</p><div id="IssueIndex"></div></div>`);
 
     
     var ArticleInfo = `<div class="ArticleInfo">
