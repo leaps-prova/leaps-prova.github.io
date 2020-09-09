@@ -118,7 +118,7 @@ h1 span#title_word {
 #Credits {
 	font-family: 'Comfortaa', cursive;
 	font-size:0.7em;
-	line-height: 1em;
+	line-height: 95%;
 	font-style: oblique;
 	border-left: solid 5px black;
 	padding: 3%;
@@ -196,7 +196,6 @@ figcaption .num {
 #Articlebody table {
 	font-family: 'Comfortaa', cursive;
 	font-size: 0.8em;
-	border: 2px solid black;
 	width:100%;
 	height:100%;
 	margin-bottom: 5%;
@@ -206,7 +205,8 @@ figcaption .num {
 	margin-right: auto;
 	border-spacing: 1px;
 	border-collapse: collapse;
-	border: solid 5px black;
+	border: solid 10% black;
+	page-break-inside: avoid;
 }
 
 
@@ -276,6 +276,8 @@ table caption .num {
 	font-family: 'Barlow', sans-serif;
 	text-transform: uppercase;
 	border:none;
+	border-top: solid 5px white;
+	border-right: solid 5px white;
 	width:3%;
 }
 
