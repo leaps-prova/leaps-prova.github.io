@@ -71,8 +71,8 @@
 	filter: sepia(1);
 	-webkit-filter: sepia(1);
 	border:2px solid;
-	margin-top: 15px;
-    margin-bottom: 15px;
+	margin-top: 1em;
+    margin-bottom: 1.7em;
 }
 #CoverWrapper {
 	font-family: myHultog;
@@ -129,8 +129,8 @@
 
 
 #file table {border: 4px solid;
-	margin-bottom: 25px;
-	margin-top: 25px;
+	margin-bottom: 1em;
+	margin-top: 1.7em;
 	word-break: break-word;
 	margin-left: auto;
 	margin-right: auto;
