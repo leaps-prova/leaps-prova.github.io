@@ -1,0 +1,4 @@
+ Questo file è un array (lista) che contiene oggetti (dizionari).
+	Ricorda: 
+	1)un file .json vuole sempre le virgolette sia per le chiavi, sia per i valori.
+	2) non mettere apostrofi perché json li legge come caratteri speciali. Se 	necessario usa il carattere " ` ". 
