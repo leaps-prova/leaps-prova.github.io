@@ -48,7 +48,6 @@ var expandCollapse = function(){
             $('#selector').addClass('offcanvas');
             // set display: "" in css for the toggle button .btn.btn-primary
             $('#closebtn-1').css('display', 'block');// removes display property to make it visible
-            $('#sticky-eye').css('display', 'block');// removes display property to make it visible
         });
     }
     else {
@@ -59,7 +58,6 @@ var expandCollapse = function(){
             $('#selector').removeAttr('style');
             // set display: none in css for the toggle button .btn.btn-primary  
             $('#closebtn-1').css('display', 'none');// hides button display on bigger screen
-            $('#sticky-eye').css('display', 'none');// hides button display on bigger screen
         });
     }
 }

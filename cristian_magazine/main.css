@@ -406,6 +406,14 @@ span.head-title {
     .sticky #metadataViewer {
         padding-top:0px;
     }
+
+    #sticky-eye {
+        display:block;
+    }
+    
+    #file {
+        margin-top: 60px;
+    }
 }
 
 
