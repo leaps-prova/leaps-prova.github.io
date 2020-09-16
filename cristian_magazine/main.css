@@ -22,10 +22,16 @@
     src: url(font/Roboto-Regular.ttf);
   
   }
+ html, body {
+    padding-top: 70px;
+    font-family: "Roboto", sans-serif;
+	height:100%;
+}
 body {
     padding-top: 70px;
     font-family: "Roboto", sans-serif;
 }
+
 .navbar, .page-footer {
    background-color: #25383C;
    color:#F5F5F5;

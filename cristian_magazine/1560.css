@@ -214,7 +214,11 @@
 		margin-right: auto;
 		border: 1px solid #4a433e;
 	}
-
+	/* DISCLAIMER */
+	#disclaimer ul {
+		list-style-position:outside;
+		word-break:break-word;
+	}
 
 	@media screen and (min-width: 1278px) {
 		#file {

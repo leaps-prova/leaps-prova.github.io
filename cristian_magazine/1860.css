@@ -149,7 +149,8 @@
     font-family: 'myFha';
     font-size: 15pt;
     margin-bottom: 0.3em;
-    text-align: left;
+    text-align: justify;
+	word-break:break-word;
 }
 #ArticleBody h2 {
     font-family: 'MyFhaCondensed';
@@ -306,12 +307,6 @@ font-size: 1.1em;
     font-size:0.8em;
 }
 
-@media screen and (min-width: 1279px) {
-   #ArticleBody {
-    -webkit-column-count: 4; /* Chrome, Safari */
-    column-count: 4;
-   }
-}
 
 @media screen and (max-width: 768px) {
 
