@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Comfortaa:wght@300&display=swap');
+
+body {
+	background-image: url("https://images.freeimages.com/images/large-previews/612/white-paper-texture-1152962.jpg");
+}
+
+a {
+	color: black;
+}
+
+
+#ArticleBody {
+		/** container **/
+	margin:7%;
+	/** margin-top: 6.2rem;
+	margin-bottom: 5.2rem;
+	margin-right: 7rem;
+	margin-left: 7rem; **/
+		/** end of the container **/
+	font-family: 'Comfortaa', cursive;
+	word-spacing: 0.2em;
+	text-transform: lowercase;
+	text-align:justify;
+	column-count: 2;
+	column-gap: 10%;
+	column-fill: balance;
+	column-rule-style: solid;
+  	column-rule-color: black;
+	font-size:0.85em;
+	line-height: 1.4;
+	padding: 2%;
+	border: solid 5px black;
+	word-wrap: break-word;
+/**	transform: rotate(-2deg); **/
+}
+
+#ArticleBody h1 {
+	font-family: 'Barlow', sans-serif;
+	font-weight:bolder;
+	font-size: 270%;
+	letter-spacing: -2%;
+	text-transform: uppercase;
+	color:white;
+	text-align:justify;
+/**	background-color:black; 
+	padding-left:0.1em;
+	padding-right: 0.08em;
+	padding-top:0.07em;
+	padding-bottom:0.02em; **/
+	column-span: all;
+/**	height: 100%; 
+  	width: 50%; **/
+  	background-color: yellow;
+  	padding: 4%;
+  	width: 50%;
+  	border-top: solid 5px black;
+  	border-right: solid 5px black;  /**indecisa!!**/
+/**  	border: solid 2px black; **/
+}
+
+h1 span#title_word {
+	display: inline-block;
+	transform: rotate(-90deg);
+	padding:22%;
+	max-width: 100%;
+	max-height: 100%;
+	margin-left: 2%;
+	margin-right: 2%;
+}   /** da sistemare! **/
+
+#ArticleBody h2 {
+	font-family: 'Comfortaa', cursive; !important;
+	letter-spacing: 0.002em;
+	line-height: 0.9em;
+	font-size: 1.5em;
+	margin-top: 5%;
+	border-top:solid 5px black;
+	border-left: solid 5px black;
+	padding: 2%;
+	width:3%;
+}
+
+/** #ArticleBody h2:nth-child(odd) {
+	border-bottom: solid 5px black;
+} **/
+
+#ArticleBody h3, #ArticleBody h4, #ArticleBody h5 {
+	font-family: 'Comfortaa', cursive !important;
+	letter-spacing: 0.002em;
+	line-height: 0.9em;
+	font-size: 1em;
+}
+
+#CoverWrapper {
+	font-family: 'Comfortaa', cursive !important;
+	text-transform: lowercase;
+	column-span:all;
+/**	transform: rotate(-20deg); **/
+}
+
+#Cover .byline {
+	text-align:justify;
+	font-size:1.3em;
+	font-weight:bolder;
+	text-transform: lowercase;
+	border-bottom: 5px solid black;
+	border-right: 5px solid black;
+	padding: 2.5%;
+	width: 1%;
+	float:right;
+	text-align: right;
+/**	padding: 6%;
+	transform: rotate(-90deg);
+	margin-top:5%; **/
+}
+
+#Credits {
+	font-family: 'Comfortaa', cursive;
+	font-size:0.7em;
+	line-height: 95%;
+	font-style: oblique;
+	border-left: solid 5px black;
+	padding: 3%;
+	background-color: blue;
+	color: white;
+	/**margin-bottom: 1.5em;**/
+}
+
+#Credits p {
+  line-height: 1em;   /* within paragraph */
+  margin-bottom: -2%; /* between paragraphs */
+  }
+
+#Summary 
+{
+	font-family: 'Comfortaa', cursive;
+	font-size:0.8em;
+	line-height: 1em;
+	border-left: solid 5px black;
+	border-bottom: solid 5px black;
+	padding: 3%;
+	margin-bottom: 1.5em;
+	background-color: blue;
+	color: white;
+}
+
+/** #Introduction p:first-of-type::first-letter, #ContentWrapper > p:first-of-type::first-letter, #ContentWrapper h2 ~ p:first-of-type::first-letter {
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-size: 900%; /**13em;**/
+/**	color: #ff3399;
+	text-transform: lowercase; 
+/**	font-style: oblique; **/
+/**	float:left;
+	shape-outside: unset(20% 20% 20% 20%);
+/**	padding-right: 0.2em; **/
+/**	line-height: 0.71em; **/
+
+}
+
+figure {
+	float:left;
+	width:100%;
+	margin-left:0%;
+	width: 100%;
+
+}
+
+img {
+	max-width: 100%;
+    max-height: 100%;
+  width: 100%;
+  height: auto;
+  padding-top: 0.7em;
+  padding-bottom: 1.2em;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  object-fit: cover;
+  padding: 2%;
+  	border-left: solid 5px black;
+	border-bottom: solid 5px black;
+}
+
+figcaption {
+	font-weight:lighter;
+	font-size: 0.7em;
+	margin-bottom: 5%;
+	padding: 2%;
+	border-left: solid 5px black;
+}
+
+figcaption .num {
+	font-weight: bold;
+}
+
+#Articlebody table {
+	font-family: 'Comfortaa', cursive;
+	font-size: 0.8em;
+	width:100%;
+	height:100%;
+	margin-bottom: 5%;
+	margin-top: 5%;
+	word-break: break-word;
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 1px;
+	border-collapse: collapse;
+	border: solid 10% black;
+	page-break-inside: avoid;
+}
+
+
+#Articlebody th, td {
+	border: 2px solid black;
+	padding:2%;
+}
+
+tr:nth-child(even) {
+	/**background-color: #f2f2f2;**/
+	background-color: white;
+}
+
+tr:nth-child(odd) {
+	/**background-color: #f2f2f2;**/
+	background-color: #f2f2f2;
+}
+
+th:nth-child(odd) {
+	background-color: yellow;
+}
+
+th:nth-child(even) {
+	background-color: blue;
+}
+
+th {
+	text-transform: uppercase;
+}
+
+table caption {
+	font-size: 0.8em;
+	text-align:justify;
+	line-height: 1.5em;
+}
+
+table caption p {
+	margin-bottom: -2%;
+}
+
+table caption .num {
+	font-family: 'Barlow', sans-serif;
+	text-transform: uppercase;
+	font-size: 2em;
+	font-weight: bold;
+	margin-bottom: 2%;
+	background-color: red;
+	border-left: solid 5px black;
+	border-bottom: solid 5px black;
+	width: 2.5%;
+	padding:2%;
+
+}
+
+#References {
+	margin-top: 10%;
+/**	margin-left: 10%;
+	margin-right: -5%; **/
+	border-top: solid 5px black;
+	border-right: solid 5px black;
+	padding: 3%;
+	background-color: red;
+	color: white;
+}
+
+#References h2 {
+	font-family: 'Barlow', sans-serif;
+	text-transform: uppercase;
+	border:none;
+	border-top: solid 5px white;
+	border-right: solid 5px white;
+	width:3%;
+}
+
+#References p {
+	font-family: 'Comfortaa', cursive;
+	font-size:0.9em;
+}
+
+#References p .biblioMarker {
+	font-weight: bold;
+}
+
+
+@media only screen and (max-width:780px) {
+#ArticleBody {
+    column-count: 2;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+#ArticleBody {
+    column-count: 1;
+    margin:7%;
+  }
+}
+
+.square {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  margin: 2%;
+}
+
+.triangle-up {
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid yellow;
+	margin: 2%;
+}
+
+.circle {
+  height: 50px;
+  width: 50px;
+  background-color: blue;
+  border-radius: 50%;
+    margin: 2%;
+}
+
+.shape {
+	float: left;
+}
+

@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cambo&display=swap');
+
+a {
+	color: #ff3399;
+}
+
+#ArticleBody {
+		/** container **/
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	margin-right: 3rem;
+	margin-left: 3rem;
+		/** end of the container **/
+	font-family: 'Source Serif Pro', serif !important;
+	font-weight: 550 !important;
+	text-align:justify;
+	column-count: 2;
+	column-gap:3%;
+	column-fill: balance;
+}
+
+#ArticleBody h1 {
+	font-family: 'Questrial', sans-serif !important;
+	font-weight: 200 !important;
+	letter-spacing: 0.002em;
+	text-transform: lowercase;
+	font-size: 4em;
+	line-height: 0.8em;
+	text-align:left;
+	margin-left: 2%;
+	margin-bottom: 2%;
+	column-span: all;
+}
+
+span#title_word {
+	font-family: 'Cambo', serif;
+	font-style: italic;
+	color: #e60000;
+	font-kerning: normal;
+	font-variant-ligatures: discretionary-ligatures;
+}
+
+#ArticleBody h2 {
+	font-family: 'Barlow Semi Condensed', sans-serif !important;
+	letter-spacing: 0.002em;
+	line-height: 0.9em;
+	font-size: 2em;
+/**	margin-left: 1.5em; **/
+}
+
+#ArticleBody h3, #ArticleBody h4, #ArticleBody h5 {
+	font-family: 'Barlow Semi Condensed', sans-serif !important;
+	letter-spacing: 0.002em;
+	line-height: 0.9em;
+	font-size: 1em;
+	margin-left: 2%;
+}
+
+#CoverWrapper {
+	font-family: 'Questrial', sans-serif !important;
+	text-transform: lowercase;
+	column-span:all;
+}
+
+#Cover .byline {
+	font-family: 'Cambo', serif;
+	font-size: 130%;
+	line-height: 0.5em;
+	margin-left: 10%;
+	color: #e60000;
+	/** border-top: dashed 2px black;
+	border-bottom: dashed 2px black; **/
+}
+
+#Cover {
+	margin-bottom: 5%;
+}
+
+#Credits {
+	font-family: 'Questrial', sans-serif;
+	font-size:0.7em;
+	font-style: oblique;
+	border-bottom: solid 0.5px #cccccc;
+	border-top: solid 0.5px #cccccc;
+	margin-bottom: 2%;
+	padding: 3%;
+/**	margin-left: -13%; **/
+	/**margin-bottom: 1.5em;**/
+}
+
+#Summary .label {
+	color: #e60000;
+}
+
+#Summary 
+{
+	font-family: 'Questrial', sans-serif;
+	font-size:0.8em;
+	line-height: 1em;
+	background-color: #f2f2f2; /**
+	border: dotted 5px #ff6600;
+	border-bottom-right-radius: 25px;
+	border-top: dashed 2px #ffb3d9;
+	border-left: dashed 2px #ffb3d9; **/
+	padding: 3%;
+	margin-bottom: 1.5em;
+/**	margin-left: -13%; **/
+}
+
+#Introduction p:first-of-type::first-letter {
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-size: 2300%; /**13em;**/
+	color: #e60000;
+	text-transform: lowercase;
+/**	font-style: oblique; **/
+	float:left;
+	shape-outside: unset(20% 20% 20% 20%);
+/**	padding-right: 0.2em; **/
+	line-height: 0.81em; 
+
+}
+
+figure {
+	/** background-color: #ff3399; **/
+	float:left;
+	width:100%;
+	margin-left:0%;
+}
+
+img {
+    max-width: 96%;
+    max-height: 96%;
+	float:center; 
+	/** background-color: #ff3399; **/
+	padding-left: 2%; 
+	padding-right: 2%;
+	margin-bottom: 0%;
+	margin-top: 2%;
+	position: relative;
+	z-index: -1;
+}
+
+figcaption {
+	font-family: 'Barlow Semi Condensed', sans-serif !important;
+	font-size: 0.8em;
+	background-color: #e60000;
+	color: white;
+	padding: 2%;
+	width: 40%;
+	margin-left: 50%;
+	margin-top: -2%;
+}
+
+figcaption .num {
+	font-weight: bold;
+}
+
+#Articlebody table {
+	font-family: 'Questrial', sans-serif;
+	border: 2px solid #b3b3b3;
+	width:100%;
+	height:100%;
+	margin-bottom: 5%;
+	margin-top: 5%;
+	word-break: break-word;
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 1px;
+	border-collapse: collapse;
+	page-break-inside: avoid;
+	height: 50%;
+}
+
+
+#ArticleBody th, td {
+	border: 1px solid #b3b3b3;
+	padding: 2%;
+}
+
+tr:nth-child(even) {
+	/**background-color: #f2f2f2;**/
+	background-color: #e6e6e6;
+}
+
+tr:nth-child(odd) {
+	/**background-color: #f2f2f2;**/
+	background-color: #f2f2f2;
+}
+
+th {
+	background-color: #ff9999;
+}
+
+table caption {
+	font-size: 0.8em;
+	text-align:justify;
+	line-height: 1em;
+}
+
+table caption p {
+	margin-bottom: -2%;
+}
+
+table caption .num {
+	font-family: 'Cambo', serif !important;
+	font-size: 2em;
+	font-weight: bold;
+	color: #e60000;
+	margin-bottom: 2%;
+}
+
+#References {
+	background-color: #f2f2f2;
+	margin-top: 2%;
+	padding: 3%;
+}
+
+#References p {
+	font-family: 'Questrial', sans-serif;
+	font-size:0.9em;
+}
+
+#References p .biblioMarker {
+	font-weight: bold;
+	color: #e60000;
+}
+
+#References h2 {
+	color: #e60000;
+	font-family: 'Cambo', serif !important;
+	font-style: italic;
+	font-size: 220%;
+	font-weight: 200;
+}
+
+@media only screen and (max-width:780px) {
+#ArticleBody {
+    column-count: 2;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+#ArticleBody {
+    column-count: 1;
+  }
+}
