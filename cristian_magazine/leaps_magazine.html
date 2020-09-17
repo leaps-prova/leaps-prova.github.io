@@ -76,52 +76,50 @@
     <!-- Main Content -->
 
     <div class="container-fluid">
+        <!--Sticky open button for mobile -->
+        <div id="sticky-eye"><span class="openbtn" onclick="openNav()">&#8676;</span><span class="head-title"></span></div>
         <div class="row clearfix">
             <!-- Left Sidebar -->
-            <div class="col-md-3">
-                <div id="selector">
-                    <a href="#" class="closebtn" id="closebtn-1" onclick="closeNav()">&times;</a>
-                    <!-- Metadata Viewer -->
-                    <div id="metadataViewer">
-                        <div class="row clearfix p-2">
-                            <div class="col-md-12">
-                                <!--Metadata Issue -->
-                                <div id="IssueBox">
-                                    <div id="metadataIssue"></div>
-                                    <div id="paginationLinks">
-                                        <div class="pagination-link"><a href="#" class="previous">&laquo;</a></div>
-                                        <div class="pagination-link"><a href="#" onclick="main()" class="coverLink">Cover</a></div>
-                                        <div class="pagination-link"><a href="#" class="next">&raquo;</a></div>
-                                    </div>
+            <div class="col-md-3" id="selector">
+                <a href="#" class="closebtn" id="closebtn-1" onclick="closeNav()">&times;</a>
+                <!-- Metadata Viewer -->
+                <div id="metadataViewer">
+                    <div class="row clearfix p-2">
+                        <div class="col-md-12">
+                            <!--Metadata Issue -->
+                            <div id="IssueBox">
+                                <div id="metadataIssue"></div>
+                                <div id="paginationLinks">
+                                    <div class="pagination-link"><a href="#" class="previous">&laquo;</a></div>
+                                    <div class="pagination-link"><a href="#" onclick="main()" class="coverLink">Cover</a></div>
+                                    <div class="pagination-link"><a href="#" class="next">&raquo;</a></div>
                                 </div>
-                                <!-- Select Style -->
-                                <div id="select-style" class="text-center mt-3">
-                                    <label><b>Choose a typographic style:</b></label>
-                                    <select id="styles" name="styleslist">
-                                        <option value="none" selected="selected">None</option>
-                                        <option value="1370">1370</option>
-                                        <option value="1560">1560</option>
-                                        <option value="1860">1860</option>
-                                        <option value="1920">1920</option>
-                                        <option value="1990">1990</option>
-                                        <option value="2000">2000</option>
-                                    </select>
-                                </div>
-                                <div id="disclaimer-btn" class="text-center"><button class="btn btn-primary mt-3" href="#" onclick="loadDisclaimer()">Disclaimer</button></div>
-                                
                             </div>
+                            <!-- Select Style -->
+                            <div id="select-style" class="text-center mt-3">
+                                <label><b>Choose a typographic style:</b></label>
+                                <select id="styles" name="styleslist">
+                                    <option value="none" selected="selected">None</option>
+                                    <option value="1370">1370</option>
+                                    <option value="1560">1560</option>
+                                    <option value="1860">1860</option>
+                                    <option value="1920">1920</option>
+                                    <option value="1990">1990</option>
+                                    <option value="2000">2000</option>
+                                </select>
+                            </div>
+                            <div id="disclaimer-btn" class="text-center"><button class="btn btn-primary mt-3" href="#" onclick="loadDisclaimer()">Disclaimer</button></div>
+                            
                         </div>
-                        <!-- Metadata Article-->
-                        <div id="metadataArticle">
-                            <!--tab-pane AJAX-->
-                        </div>
-                    </div> 
-                </div>
+                    </div>
+                    <!-- Metadata Article-->
+                    <div id="metadataArticle">
+                        <!--tab-pane AJAX-->
+                    </div>
+                </div> 
             </div>
             <!-- MAIN COLUMN -->
             <div class="col-md-9" id="fileWrapper">
-                <!--Sticky open button for mobile -->
-                <div id="sticky-eye"><span class="openbtn" onclick="openNav()">&#8676;</span><span class="head-title"></span></div>
                 
                  <!-- ARTICLE CONTAINER -->
                 <div class="row clearfix mt-3">
