@@ -24,135 +24,18 @@
     padding: 30px; 
     min-height:100vh;
     background-image: url("img/newspaper3.jpg");
-}
+    font-size:13pt;
+    font-family: 'myBodoni';
+    text-align:justify;
+}   
 
-/* COVER */
-
-#IssueCover {
-    text-align: justify;
-    font-family: myBodoni;
-    font-size:15pt;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #2b1d0e;
-}
-#IssueCover h1 {
-    font-family: myTitle;
-    font-size:90px;
-    text-align:center;
-    text-shadow: 2px 2px #f5e1bf, 3px 3px #000000;
-    letter-spacing: 7px;
-}
-.IssueBibliographicCitation {
-    width: 95%;
-    border-top: double;
-    border-bottom: double;
-    border-color: #241B12;
-    display: block;
-    padding: 0.3em;
-    margin-left: 2.5%;
-    text-align:center;
-    font-family: myFha;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-}
-
-#IssueIndex {
-    column-count: 2;
-    -webkit-column-count: 2; /* Chrome, Safari */
-    -webkit-column-gap: 20px; /* Chrome, Safari */
-    column-gap: 20px;
-    -webkit-column-rule: 1px solid; /* Chrome, Safari */
-    column-rule: 1px solid;
-}
-
-.ArticleInfo{
-    -webkit-column-break-inside: avoid;
-          page-break-inside: avoid;
-               break-inside: avoid;
-    width:90%;
-    margin-left:5%;;
-    margin-right: 5%;
-    padding-top:1em;
-    padding-bottom:1em;
-    overflow: auto;
-    word-break: break-word;
-}
-
-.ArticleInfo p.coverLabel {
-    clear:both;
-    font-size:1.1em;
-    margin-bottom:0.5em;
-}
-.ArticleInfo p.coverLabel a{
-    font-family: myFhaCondensed;
-    color: #2b1d0e;
-}
-.ArticleInfo p.coverLabel a:hover{
-    text-decoration: none;
-    text-shadow: 2px 2px #f5e1bf, 3px 3px #000000;
-}
-.ArticleInfo p:not(.coverLabel) {
-   float:left;
-   padding-right:5px;
-   margin-bottom: 0.2em;
-}
-
-.ArticleInfo p.coverSource {
-    float:right;
-    font-size:0.9em;
-}
-
-.ArticleInfo p.coverSource a{
-    color: #2b1d0e;
-}
-.ArticleInfo p.coverSource a:hover{
-    text-decoration: none;
-    font-style:italic;
-}
-
-
-#IssueIndex::before {
-    column-span:all;
-    content: "";
-    background-image: url("img/caricature.jpg");
-    filter:sepia(90%) opacity(70%);
-    background-size: 100% 100%;
-    height:1000px;
-    width: 750px;
-    display: block;
-    border: 1px solid #4a433e;
-    margin-top:1em;
-    margin-bottom:2em;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-    
-/*ARTICLE*/
-    
-#ArticleBody {
-    text-align: justify;
-    -webkit-column-count: 3; /* Chrome, Safari */
-    column-count: 3;
-    -webkit-column-gap: 20px; /* Chrome, Safari */
-    column-gap: 20px;
-    -webkit-column-rule: 1px solid; /* Chrome, Safari */
-    column-rule: 1px solid;
-    color: #2b1d0e;
-    font-family: myBodoni;
-    font-size: 13pt;
-}
-
-#ArticleBody h1 {
+#file h1 {
     font-family: 'myFha';
     font-size: 15pt;
-    margin-bottom: 0.3em;
-    text-align: justify;
-	word-break:break-word;
+    margin-bottom: 0.5em;
+    text-align:center;
 }
-#ArticleBody h2 {
+#file h2 {
     font-family: 'MyFhaCondensed';
     text-transform: uppercase;
     text-align: center;
@@ -160,7 +43,7 @@
     padding-top:1em;
     padding-bottom:1em;
 }
-#ArticleBody h3, #ArticleBody h4, #ArticleBody h5 {
+#file h3, #file h4, #file h5 {
     font-family: 'MyBodoniCondensed';
     font-size: 15pt;
     letter-spacing: 1.5px; 
@@ -170,33 +53,32 @@
     padding-bottom:0.9em;
 }
 
-#ArticleBody a, #disclaimer a {
+#file a {
     color: #241B12;
     text-decoration: underline;
 }
-#ArticleBody a:hover, #disclaimer a:hover {
+#file a:hover {
     text-decoration: none;
     color: #241B12;
     font-style: italic;
 }
-#ArticleBody ul {
-    list-style-position: inside;
+#file ul {
     list-style-type: lower-roman;
     padding-top:0.5em;
 
 }
 
-#ArticleBody figure {
+#file figure {
     margin:0.7em;
     display: block;
 }
-#ArticleBody img {
+#file img {
     filter:sepia(90%) opacity(70%);
     width:100%;
     height:auto;
 }
 
-#ArticleBody table {
+#file table {
     margin-top:0.9em;
     margin-bottom:0.9em;
     font-family: myBodoniCondensed;
@@ -211,15 +93,14 @@
 }
   
   
-#ArticleBody th {
+#file th {
     border: 1px solid;
     border-color: #241B12;
-    font-size: 1.2em;
     text-transform: uppercase;
     padding: 0.5em;
 }
   
-#ArticleBody td {
+#file td {
     border: 1px solid;
     border-color: #241B12;
     padding: 0.5em; 
@@ -229,11 +110,11 @@
     letter-spacing: 3px;
   }
   
-#ArticleBody table caption {
+#file table caption {
     padding-top: 0.9em;
     padding-bottom: 0.9em;
 }  
-#ArticleBody figcaption {
+#file figcaption {
     font-family: myBodoniCondensed;
     border-top: 1px solid;
     border-bottom: 1px solid;
@@ -245,23 +126,43 @@
     text-align: center;
   }
 
+  /*ARTICLE*/
+    
+#ArticleBody {
+    text-align: justify;
+    -webkit-column-count: 3; /* Chrome, Safari */
+    column-count: 3;
+    -webkit-column-gap: 20px; /* Chrome, Safari */
+    column-gap: 20px;
+    -webkit-column-rule: 1px solid; /* Chrome, Safari */
+    column-rule: 1px solid;
+    color: #2b1d0e;
+    overflow: hidden;
+    word-wrap: break-word;
+    hyphens: auto;
+}
 #CoverWrapper {
+    column-span:all;
     border-bottom: 1px solid #2b1d0e;
     font-family: 'MyBodoniCondensed';
     font-size: 1.2em;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-bottom: 1em;
+    text-align:center;
 }
 #CoverWrapper p {
     display:inline;
-    word-break: break-word;
-    hyphens: auto;
+    
 }
+#CoverWrapper p.subtitle {
+    display:block;
+    margin-bottom:0.3em;
+}
+
 #ContentWrapper {
     line-height: 0.9;
-    word-break: break-word;
-    hyphens: auto;
+    padding:0.9em;
  }
 
  #ContentWrapper p{
@@ -298,15 +199,115 @@ font-size: 1.1em;
 
 /* DISCLAIMER */
 #disclaimer {
-    padding:20px 15px 20px 15px;
+    padding:1.3em 1em 1.3em 1em;
     font-family: myBodoniCondensed;
     font-size:1.2em;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 #disclaimer a {
     font-family:myBodoni;
     font-size:0.8em;
 }
 
+/* COVER */
+
+#IssueCover {
+    font-size:15pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #2b1d0e;
+}
+#IssueCover h1 {
+    font-family: myTitle;
+    font-size:90px;
+    text-align:center;
+    text-shadow: 2px 2px #f5e1bf, 3px 3px #000000;
+    letter-spacing: 7px;
+}
+.IssueBibliographicCitation {
+    width: 95%;
+    border-top: double;
+    border-bottom: double;
+    border-color: #241B12;
+    display: block;
+    padding: 0.3em;
+    margin-left: 2.5%;
+    text-align:center;
+    font-family: myFha;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+#IssueIndex {
+    column-count: 2;
+    -webkit-column-count: 2; /* Chrome, Safari */
+    -webkit-column-gap: 20px; /* Chrome, Safari */
+    column-gap: 20px;
+    -webkit-column-rule: 1px solid; /* Chrome, Safari */
+    column-rule: 1px solid;
+}
+
+#IssueIndex .ArticleInfo{
+    -webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
+               break-inside: avoid;
+    width:90%;
+    margin-left:5%;;
+    margin-right: 5%;
+    padding-top:1em;
+    padding-bottom:1em;
+    overflow: auto;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+#IssueIndex .ArticleInfo p.coverLabel {
+    clear:both;
+    font-size:1.1em;
+    margin-bottom:0.5em;
+}
+#IssueIndex .ArticleInfo p.coverLabel a{
+    text-decoration: none;
+    font-family: myFhaCondensed;
+    color: #2b1d0e;
+}
+#IssueIndex .ArticleInfo p.coverLabel a:hover{
+    font-style: normal;
+    text-decoration: none;
+    text-shadow: 2px 2px #f5e1bf, 3px 3px #000000;
+}
+#IssueIndex .ArticleInfo p:not(.coverLabel) {
+   float:left;
+   padding-right:5px;
+   margin-bottom: 0.2em;
+}
+
+
+
+#IssueIndex::before {
+    column-span:all;
+    content: "";
+    background-image: url("img/caricature.jpg");
+    filter:sepia(90%) opacity(70%);
+    background-size: 100% 100%;
+    height:1000px;
+    width: 750px;
+    display: block;
+    border: 1px solid #4a433e;
+    margin-top:1em;
+    margin-bottom:2em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width:1000px) {
+    #IssueIndex::before {
+        width:500px;
+        height: 750px;
+    }
+}
 
 @media screen and (max-width: 768px) {
 
@@ -322,18 +323,14 @@ font-size: 1.1em;
     #IssueBibliographicCitation {
         letter-spacing: 7px;
     }
-    #IssueIndex::before {
-        width:500px;
-        height:750px;
-    }
 
 
 
     #file {
-    padding:18px;
     font-size:12pt;
     padding: 24px;
     }
+
     #ArticleBody {
         -webkit-column-count: 2; /* Chrome, Safari */
         column-count: 2;

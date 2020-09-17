@@ -126,6 +126,10 @@
 		color: #4a433e;
 		text-decoration:underline;
 	}
+#ArticleBody {
+	overflow: hidden;
+	word-wrap: break-word;
+}
 #ArticleBody a {
 	text-decoration:underline;
 }
@@ -215,9 +219,13 @@
 		border: 1px solid #4a433e;
 	}
 	/* DISCLAIMER */
+	#disclaimer {
+		padding:1.7em;
+		text-align:center;
+	}
 	#disclaimer ul {
 		list-style-position:outside;
-		word-break:break-word;
+		word-wrap: break-word;
 	}
 
 	@media screen and (min-width: 1278px) {
@@ -308,6 +316,9 @@
 		padding-left: 35px;
 		padding-right: 35px;
 		padding-bottom: 21px;
+	}
+	#disclaimer {
+		padding:1em;
 	}
 }
 
