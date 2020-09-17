@@ -1,0 +1,327 @@
+@font-face {
+    font-family: 'giveny';
+    src: url('Giveny.ttf');
+}
+@font-face {
+    font-family: 'chromate';
+    src: url('Chromate-Regular.ttf');
+}
+@font-face {
+    font-family: 'forum';
+    src: url('Forum.ttf');
+}
+@font-face {
+    font-family: 'amagro';
+    src: url('Amagro.ttf');
+}
+
+
+div.cover {
+background: linear-gradient(-45deg, yellow,#e8548d, #70c4ff, #26ffc2);
+	background-size: 400% 400%;
+	-webkit-animation: gradient 15s ease infinite;
+	        animation: gradient 15s ease infinite;
+	height:100%;
+	
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+div.article {
+   margin-left: 175px;
+   margin-right: -10px;
+}
+
+/* COVER */
+div.cover {
+position:relative;
+margin-left:none;
+margin-right:none;
+margin-top:48px;
+}
+
+.title {
+width:100%;
+height:100%;
+}
+
+.coverpic {
+max-width:55%;
+position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+margin-top: auto;
+margin-bottom: auto;
+top: 0;
+bottom: 0;
+
+ filter: blur(2px);
+  -webkit-filter: blur(1px);
+}
+
+.covercaption {
+display:none;
+}
+
+div.title  h1{
+width:70%;
+height:70%;
+color:white;
+text-align:center;
+font-size:95px;
+font-family:'giveny';
+position:absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+margin-top: auto;
+margin-bottom: auto;
+top: 0;
+bottom: 0;
+
+}
+
+.byline {
+font-family:'chromate';
+color:white;
+position: absolute;
+text-align:center;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+bottom:12%;
+
+}
+
+.publicationDate {
+color:white;
+position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+top:5%;
+text-align: center;
+font-family:'chromate';
+}
+
+div.cover p.pubnote {
+color:white;
+font-family:'chromate';
+font-size:12px;
+text-transform: uppercase;
+writing-mode: vertical-rl;
+text-orientation: mixed;
+text-align:center;
+position:absolute;
+width: 6%;
+height:70%;
+margin-top: auto;
+margin-bottom: auto;
+top: 0;
+bottom: 0;
+right:25;
+}
+
+p.subtitle  {
+color:white;
+font-family:'chromate';
+font-size:12px;
+text-transform: uppercase;
+writing-mode: vertical-rl;
+transform: rotate(180deg);
+text-orientation: mixed;
+text-align:center;
+position:absolute;
+width: 6%;
+height:70%;
+margin-top: auto;
+margin-bottom: auto;
+top: 0;
+bottom: 0;
+left:25;
+
+}
+
+
+/* CONTENT */
+/* ---  */
+
+div.content {
+display: block;
+margin-top: 10%;
+width:100%;
+
+}
+
+div.content p{
+margin-left:20%;
+margin-right:20%;
+font-size:20px;
+text-align:justify;
+}
+
+div.foot {
+margin-left:40px;
+margin-right:40px;
+}
+
+div.content figure{ 
+display: inline-block;
+width: 80%;
+margin-right:10%;
+margin-left:10%;
+}
+
+figure img{ 
+vertical-align: top;
+max-width:100%;
+height:auto;
+}
+
+figcaption {
+text-align: center;
+text-transform: uppercase;
+font-size:75%;
+width: 70%;
+margin-left: auto;
+margin-right:auto;
+padding-top:2%;
+padding-bottom:2%;
+}
+
+blockquote {
+display: inline-block;
+width: 92%;
+line-height 50%;
+color:white;
+text-align: center;
+font-family:'chromate';
+font-size:300%;
+	background: linear-gradient(-45deg, yellow,#e8548d, #8fe1ff, #abd1a6);
+	background-size: 400% 400%;
+	-webkit-animation: gradient 15s ease infinite;
+	        animation: gradient 15s ease infinite;
+padding-top: 5%;
+padding-right: 4%;
+padding-left: 4%;
+margin-right: 0px;
+margin-left: 0px;
+}
+
+blockquote:after {
+display:block;
+content: " — Quote —";
+font-size:40%;
+padding: 5%;
+}
+
+.foot::before {
+    display: inline-block;
+    content: "";
+    border-top: 0.08rem solid black;
+    width: 80%;
+    margin-top:5%;
+    margin-right: 10%;
+    margin-left: 10%;
+    transform: translateY(-1rem);
+}
+.bio {
+text-align:center;
+}
+.copy {
+text-align:center;}
+.pubnote { 
+text-align:center;
+}
+.bio::after {
+    display: inline-block;
+    content: "";
+    border-top: 0.08rem solid black;
+    width: 80%;
+    margin-top:5%;
+    margin-right: 10%;
+    margin-left: 10%;
+    transform: translateY(-1rem);
+}
+/* NAVIGATION BARS AND MENUS */
+/* ---  */
+
+.sidenav {
+  height: 100%; 
+  width: 180px; 
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 46; /* Stay at the top */
+  left: 0;
+  background-color: white; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  box-shadow: 4px 0 5px -2px rgba(0,0,0,.2);
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: white;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+  z-index: 9999;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: white;
+  color: black;
+}
