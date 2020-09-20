@@ -6,16 +6,20 @@ function retrieve_biblioRef() {
 		}
 }
 
-function show_biblioRef() {
-	var x = document.getElementsByClassName("label");
+ function show_biblioRef() {
+	var x = document.getElementsByClassName("biblioRef");
 	var i;
 	var l = [];
-	for (i = 0; i < 9; i++) {
+	for (i = 0; i < count(); i++) {
 		l.push(x[i]);
 	}
-	document.getElementById("show").innerHTML = l.lenght;
+	document.getElementById("show").innerHTML = l;
 }
 
+function count() {
+	 var x = document.getElementsByClassName("biblioRef");
+	 document.getElementById("demo").innerHTML = x.length;
+}
 
 // var l = [first_1];
 //	for (i = 0; i < x.lenght; i++) {
