@@ -146,7 +146,7 @@
 	padding-bottom: 88px;
 }
 
-#footerWrapper, #file .myPubnote {
+#FootWrapper, #file .myPubnote {
 	padding-left: 88px;
 	padding-right: 88px;
 	font-family: myHultogCoursive;
@@ -235,7 +235,7 @@
 		padding-right: 200px;
 		padding-bottom: 340px;
 	}
-	#file .myPubnote, #file #footerWrapper {
+	#file .myPubnote, #file #FootWrapper {
 		padding-left:118px;
 		padding-right:118px;
 		padding-bottom: 69px;
@@ -285,7 +285,7 @@
 		padding-right: 6px;
 	}
 
-	#file #footerWrapper, #file .myPubnote {
+	#file #FootWrapper, #file .myPubnote {
 		padding-left: 59px;
 		padding-right: 59px;
 		padding-bottom: 35px;
@@ -312,7 +312,7 @@
 	#CoverWrapper {
 		padding-bottom: 35px;
 	}
-	#file #footerWrapper, #file .myPubnote {
+	#file #FootWrapper, #file .myPubnote {
 		padding-left: 35px;
 		padding-right: 35px;
 		padding-bottom: 21px;

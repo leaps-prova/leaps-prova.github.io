@@ -184,14 +184,14 @@
 }
 
 
-#ArticleBody .myPubnote, #footerWrapper {
+#ArticleBody .myPubnote, #FootWrapper {
 font-family: myBodoniCondensed;
 margin-top: 15px;
 margin-bottom: 15px;
 line-height: 1;
 font-size: 1.1em;
 }
-#ArticleBody .myPubnote p, #footerWrapper p {
+#ArticleBody .myPubnote p, #FootWrapper p {
     margin:0px;
     text-indent:0em;
     padding: 0.3em;
