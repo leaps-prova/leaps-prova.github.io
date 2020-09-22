@@ -54,7 +54,6 @@ var expandCollapse = function(){
             // remove a class .collapse from a div .showHide
 
             $('#selector').removeClass('offcanvas');
-            $('#fileWrapper').removeAttr('style');
             $('#selector').removeAttr('style');
         });
     }
@@ -62,12 +61,10 @@ var expandCollapse = function(){
 function openNav() {
     closeOccurrences();
     $('.offcanvas').css('transform', 'translateX( 0 )');
-    $('#fileWrapper').css('transform', 'translateX( 320px )');
     }
 
 function closeNav() {
     $('.offcanvas').css('transform', 'translateX( -320px )');
-    $('#fileWrapper').css('transform', 'translateX( 0 )');
 
 }
 
@@ -246,8 +243,7 @@ function loadArticle(file) {
     closeOccurrences();
     
     
-    $('#metadataArticle').append(` <div class="row clearfix mt-3">
-        <div class="col-md-12">
+    $('#metadataArticle').append(`
         <h4>In this article:</h4>
             <ul class="nav nav-tabs" id="leftTab" role="tablist">
                 <li class="nav-item">
@@ -291,9 +287,7 @@ function loadArticle(file) {
                 <div class="tab-pane myBorder myBorder-notop" id="asides" role="tabpanel" aria-labelledby="asides-tab">
                     <ul class="minimal"></ul>
                 </div>
-            </div>
-        </div>
-    </div>`);
+            </div>`);
     var prev_file = getPrevious(file);
     var next_file = getNext(file);
     $('#paginationLinks .previous').attr("onclick","loadArticle('"+prev_file+"')");

@@ -140,6 +140,7 @@
     overflow: hidden;
     word-wrap: break-word;
     hyphens: auto;
+    padding:1.3em;
 }
 #CoverWrapper {
     column-span:all;
@@ -206,7 +207,7 @@ font-size: 1.1em;
 
 /* DISCLAIMER */
 #disclaimer {
-    padding:1.3em 1em 1.3em 1em;
+    padding:1.3em;
     font-family: myBodoniCondensed;
     font-size:1.2em;
     word-wrap: break-word;

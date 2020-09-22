@@ -84,39 +84,45 @@
                 <a href="#" class="closebtn" id="closebtn-1" onclick="closeNav()">&times;</a>
                 <!-- Metadata Viewer -->
                 <div id="metadataViewer">
-                    <div class="row clearfix p-2">
+                    <div class="row clearfix">
                         <div class="col-md-12">
-                            <!--Metadata Issue -->
-                            <div id="IssueBox">
-                                <div id="metadataIssue"></div>
-                                <div id="paginationLinks">
-                                    <div class="pagination-link"><a href="#" class="previous">&laquo;</a></div>
-                                    <div class="pagination-link"><a href="#" onclick="main()" class="coverLink">Cover</a></div>
-                                    <div class="pagination-link"><a href="#" class="next">&raquo;</a></div>
+                            <!-- Pagination links -->
+                            <div id="paginationLinks">
+                                <div class="pagination-link"><a href="#" class="previous">&laquo;</a></div>
+                                <div class="pagination-link"><a href="#" onclick="main()" class="coverLink">index</a></div>
+                                <div class="pagination-link"><a href="#" class="next">&raquo;</a></div>
+                            </div>
+                            <!-- Metadata Article-->
+                            <div id="metadataArticle">
+                                <!--tab-pane AJAX-->
+                            </div>
+                            <!-- styles and disclaimer -->
+                            <div id="floating-btns">
+                                <div id="select-style" class="text-center mt-3">
+                                    <select id="styles" name="styleslist" placeholder="Select style">
+                                        <option value="none" selected="selected">Styles</option>
+                                        <option value="1370">1370</option>
+                                        <option value="1560">1560</option>
+                                        <option value="1860">1860</option>
+                                        <option value="1920">1920</option>
+                                        <option value="1980">1980</option>
+                                        <option value="1990">1990</option>
+                                        <option value="2000">2000</option>
+                                        <option value="2025">2025</option>
+                                    </select>
                                 </div>
+                                <div id="disclaimer-btn"><button href="#" onclick="loadDisclaimer()">Disclaimer</button></div>
                             </div>
-                            <!-- Select Style -->
-                            <div id="select-style" class="text-center mt-3">
-                                <label><b>Choose a typographic style:</b></label>
-                                <select id="styles" name="styleslist">
-                                    <option value="none" selected="selected">None</option>
-                                    <option value="1370">1370</option>
-                                    <option value="1560">1560</option>
-                                    <option value="1860">1860</option>
-                                    <option value="1920">1920</option>
-                                    <option value="1980">1980</option>
-                                    <option value="1990">1990</option>
-                                    <option value="2000">2000</option>
-                                    <option value="2025">2025</option>
-                                </select>
-                            </div>
-                            <div id="disclaimer-btn" class="text-center"><button class="btn btn-primary mt-3" href="#" onclick="loadDisclaimer()">Disclaimer</button></div>
-                            
                         </div>
                     </div>
-                    <!-- Metadata Article-->
-                    <div id="metadataArticle">
-                        <!--tab-pane AJAX-->
+                    <!--Metadata Issue -->
+                    <div class="row clearfix mt-3">
+                        <div class="col-md-12">
+                            <div id="IssueBox">
+                                <h4>About this journal:</h4>
+                                <div id="metadataIssue"></div>
+                            </div>
+                        </div>
                     </div>
                 </div> 
             </div>
