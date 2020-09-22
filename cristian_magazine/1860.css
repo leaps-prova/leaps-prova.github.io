@@ -13,7 +13,7 @@
   }
 @font-face {
     font-family: myBodoni;
-	src: url(font/BodoniFLF-Roman.ttf);
+	src: url(font/bodoni.ttf);
 }
 @font-face {
     font-family: myBodoniCondensed;
@@ -159,7 +159,14 @@
     display:block;
     margin-bottom:0.3em;
 }
-
+#CoverWrapper img {
+    border: 1px solid #241B12;
+}
+#CoverWrapper figcaption {
+    border: none;
+    font-family: myBodoni;
+    font-size: 0.5em;
+}
 #ContentWrapper {
     line-height: 0.9;
     padding:0.9em;
@@ -172,7 +179,7 @@
 #ContentWrapper p:first-of-type, #ContentWrapper h2 + p, #ContentWrapper p .myFirstletter {
     text-indent: 0em;
 }
-#ContentWrapper .myFirstletter, #ContentWrapper h2 + p::first-letter, #ContentWrapper h2 ~ p:first-of-type::first-letter {
+#ContentWrapper p.myFirstletter, #ContentWrapper h2 + p::first-letter, #ContentWrapper h2 ~ p:first-of-type::first-letter {
     font-size: 2.2em;
     float:left;
     padding-right: 0.2em;

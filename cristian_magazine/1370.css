@@ -1,24 +1,24 @@
 @font-face {
 	font-family: MiddleAges;
-	src: url(fonts/MiddleAges_PERSONAL_USE.ttf);
+	src: url(font/MiddleAges_PERSONAL_USE.ttf);
 
   }
 
   @font-face {
 	font-family: mySquac;
-	src: url(fonts/squac___.TTF);
+	src: url(font/squac___.TTF);
 
   }
   
   @font-face {
 	font-family: mySeagram;
-	src: url(fonts/Seagram.ttf);
+	src: url(font/Seagram.ttf);
    /* article body */ 
   }
   
   @font-face {
 	font-family: myCaps;
-	src: url(fonts/Medievalalphabet-4EY6.ttf);
+	src: url(font/Medievalalphabet-4EY6.ttf);
    /* caps */ 
 
   }
