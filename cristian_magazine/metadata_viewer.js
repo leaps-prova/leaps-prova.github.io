@@ -88,11 +88,54 @@ $(window).resize(expandCollapse);
 
 var ajaxResult=[];
 
+function loadCover(articlesArray, title, bibliographicCitation) {
+    $('#file').append(`<div id="IssueCover"><h1>` + title + `</h1>
+    <p class="IssueBibliographicCitation">` + bibliographicCitation + `</p>
+    <div id="IssueIndex"></div></div>`);
+
+    var ArticleInfoTpl = `<div class="ArticleInfo">
+    <p class="coverLabel"><a href='#' onclick='loadArticle("$url")'>$label</a></p>
+    <p class="coverAuthor">$author</p>
+    <p class="coverIssued">$issued</p>
+    </div>`;
+    for (var i = 0; i < articlesArray.length; i++) {                
+        $('#IssueIndex').append(ArticleInfoTpl.tpl({
+            url: articlesArray[i].url,
+            label: articlesArray[i].label,
+            author: articlesArray[i].author,
+            issued: articlesArray[i].issued
+        }));
+    }
+}
+function addAuthorsAndKeywords(articlesArray) {
+    var authorsTpl = `<p class="list authors"><span class="label">Articles Written by: </span>$authors</p>`;
+    var keywordsTpl = `<p class="list keywords"><span class="label">keywords: </span>$keywords</p>`
+    var authorsIssue = [];
+    var keywordsIssue = [];
+    for (var i = 0; i < articlesArray.length; i++) {
+        var authorsList = articlesArray[i].author.split(', ');
+        var keywordsList = articlesArray[i].keywords.split(', ');
+        for (var j = 0; j < authorsList.length; j++) {
+            authorsIssue.push(`<a href="#" onclick="loadArticle('` + articlesArray[i].url + `')">` + authorsList[j] + `</a>`);
+        }
+        for (var j = 0; j < keywordsList.length; j++) {
+            keywordsIssue.push(`<a href="#" onclick="loadArticle('` + articlesArray[i].url + `')">#` + keywordsList[j] + `</a>`);
+        }
+    }
+    authorsIssue = authorsIssue.join(', ');
+    keywordsIssue = keywordsIssue.join(', ');
+    $('#metadataIssue').append(authorsTpl.tpl({
+        authors : authorsIssue
+    }));
+    $('#metadataIssue').append(keywordsTpl.tpl({
+        keywords : keywordsIssue
+    }));
+}
 
 function main() {
     $('#metadataArticle').empty();
     $('#metadataIssue').empty();
-    closeOccurrences()
+    closeOccurrences();
     $('#file').empty();
     $('#paginationLinks').css('display', 'none');
     if ($(window).width() < 768) {
@@ -113,55 +156,13 @@ function main() {
                 <p class="list subject"><span class="label">Subject: </span>`+ subject + `</p>
                 <p class="list date"><span class="label">Issued: </span>`+ date + `</p>
 				<p class="list bibiographicCitation"><span class="label">Citation: </span>` + bibliographicCitation + `</p>`);
-    
-    
-    $('#file').append(`<div id="IssueCover"><h1>` + title + `</h1>
-                <p class="IssueBibliographicCitation">` + bibliographicCitation + `</p><div id="IssueIndex"></div></div>`);
-    
-    var ArticleInfo = `<div class="ArticleInfo">
-    <p class="coverLabel"><a href='#' onclick='loadArticle("$url")'>$label</a></p>
-    <p class="coverAuthor">$author</p>
-    <p class="coverIssued">$issued</p>`;
-
-    var authorstpl = `<p class="list authors"><span class="label">Articles Written by: </span>$authors</p>`;
-    var keywordstpl = `<p class="list keywords"><span class="label">keywords: </span>$keywords</p>`
-    
     $.ajax({
         method: 'GET',
         url: 'filelist.json',
         success: function (d) {
-            var authorsIssue = [];
-            var keywordsIssue = [];
-
-            for (var i = 0; i < d.length; i++) {
-                
-                var authorsList = d[i].author.split(', ');
-                var keywordsList = d[i].keywords.split(', ');
-                for (var j = 0; j < authorsList.length; j++) {
-                    authorsIssue.push(`<a href="#" onclick="loadArticle('` + d[i].url + `')">` + authorsList[j] + `</a>`);
-                }
-                for (var j = 0; j < keywordsList.length; j++) {
-                    keywordsIssue.push(`<a href="#" onclick="loadArticle('` + d[i].url + `')">#` + keywordsList[j] + `</a>`);
-                }
-                
-                $('#IssueIndex').append(ArticleInfo.tpl({
-                    url: d[i].url,
-                    label: d[i].label,
-                    author: d[i].author,
-                    issued: d[i].issued
-                }));
-            }
             
-            authorsIssue = authorsIssue.join(', ');
-            keywordsIssue = keywordsIssue.join(', ');
-           
-            $('#metadataIssue').append(authorstpl.tpl({
-                authors : authorsIssue
-            }));
-            $('#metadataIssue').append(keywordstpl.tpl({
-                keywords : keywordsIssue
-            }));
-            
+            loadCover(d, title, bibliographicCitation);
+            addAuthorsAndKeywords(d);
             ajaxResult.push(d);
             
         },
