@@ -97,16 +97,19 @@ function loadCover(articlesArray, title, bibliographicCitation) {
     <p class="coverLabel"><a href='#' onclick='loadArticle("$url")'>$label</a></p>
     <p class="coverAuthor">$author</p>
     <p class="coverIssued">$issued</p>
+    <img src="$firstImage" class="articleImg">
     </div>`;
     for (var i = 0; i < articlesArray.length; i++) {                
         $('#IssueIndex').append(ArticleInfoTpl.tpl({
             url: articlesArray[i].url,
             label: articlesArray[i].label,
             author: articlesArray[i].author,
-            issued: articlesArray[i].issued
+            issued: articlesArray[i].issued,
+            firstImage: articlesArray[i].imagesource
         }));
     }
 }
+
 function addAuthorsAndKeywords(articlesArray) {
     var authorsTpl = `<p class="list authors"><span class="label">Articles Written by: </span>$authors</p>`;
     var keywordsTpl = `<p class="list keywords"><span class="label">keywords: </span>$keywords</p>`

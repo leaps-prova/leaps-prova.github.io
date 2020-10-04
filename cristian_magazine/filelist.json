@@ -6,7 +6,8 @@
 		"issued": "21 October 2019",
 		"publisher": "Small Business Economics",
 		"source": "https://link.springer.com/article/10.1007/s11187-019-00272-4",
-		"keywords": "entrepreneurship, Silicon Valley, Globalization, Public policy, Innovation"
+		"keywords": "entrepreneurship, Silicon Valley, Globalization, Public policy, Innovation",
+		"imagesource":"\"\""
 	},
 	{
 		"label": "What Are the Odds We Are Living in a Computer Simulation?",
@@ -15,7 +16,8 @@
 		"issued": "2016-06-09",
 		"publisher": "The New Yorker",
 		"source": "https://www.newyorker.com/books/joshua-rothman/what-are-the-odds-we-are-living-in-a-computer-simulation",
-		"keywords": "virtual reality"
+		"keywords": "virtual reality",
+		"imagesource":"simulation/img01.jpg"
 	},
 	{
 		"label": "The 10 most in-demand tech jobs for 2020 — and how to hire for them",
@@ -24,7 +26,8 @@
 		"issued": "2020-01-10",
 		"publisher": "CIO",
 		"source": "https://www.cio.com/article/3235944/hiring-the-most-in-demand-tech-jobs-for-2018.html",
-		"keywords": "tech jobs"
+		"keywords": "tech jobs",
+		"imagesource":"cio/cio.jpg"
 	},
 	{
 		"label": "In China, GitHub Is a Free Speech Zone for Covid Information",
@@ -33,6 +36,7 @@
 		"issued": "2020-09-09",
 		"publisher": "Wired",
 		"source": "https://www.wired.com/story/china-github-free-speech-covid-information/",
-		"keywords": "china, github, censorship, covid-19"
+		"keywords": "china, github, censorship, covid-19",
+		"imagesource":"github_corona/img01.png"
 	}
 ]

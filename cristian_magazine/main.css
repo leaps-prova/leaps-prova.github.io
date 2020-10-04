@@ -299,7 +299,9 @@ h1, h2, h3, h4, h5{
     padding:2em;
     text-align:justify;
 }
-
+#IssueCover .articleImg {
+    display:none;
+}
 #ArticleBody {
     display:block;
     overflow:hidden;
