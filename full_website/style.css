@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
+
+body {
+    font-family: 'Amiri', serif;
+}
+
+a {
+    color: #8c8c8c;
+}
+
+a:hover {
+    color: #3399ff;
+    text-decoration: none;
+}
+
+h1, h1 + p {
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+}
+.navbar {
+      background-color: #f2f2f2;
+}
+.dropdown-menu {
+    background-color: #f2f2f2;
+}
+.parallax {
+    /* The image used */
+    background-image: url("eyegif.gif");
+    opacity: 0.9;
+
+    /* Set a specific height */
+    min-height: 500px;
+    max-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.jumbotron {
+    background-color: #f2f2f2;
+}
+#asideLeft{
+  padding-top:5em;
+  padding-bottom:5em;
+  padding-left:1em;
+}
+#asideRight{
+  padding-top:5em;
+  padding-bottom:5em;
+  padding-right:1em;
+}
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 120;
+}
+#center {
+  padding:5em;
+  text-align:justify;
+  font-size: 1.1em;
+}
+
+#center p:first-of-type::first-letter {
+    font-size: 200%;
+    shape-outside: unset(20% 20% 20% 20%);
+}
+#center h1 {
+    margin-bottom: 10%;
+}
+#center h2 {
+  text-align: center;
+}
+.card {
+  border: none;
+}
+.container_img {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+   opacity: 1;
+   display: block;
+   width: 100%;
+   height: auto;
+   transition: .5s ease;
+   backface-visibility: hidden;
+}
+
+.container_img:hover .image {
+  opacity: 0.5;
+}
+
+img {
+  width: 200px;
+  min-height: 300px;
+  max-height: 300px;
+  object-fit: cover;
+}
+#footer {
+  background-color: #f2f2f2;
+}
+#firstColumn, #secondColumn, #thirdColumn {
+  display: inline-block;
+}
+.page-footer ul {
+  list-style-type: none;
+}
+.page-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 1.5em; /* Vertically center the text there */
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 600px) {
+.sticky {
+  position: static;
+}
+.container {
+  margin: 0%;
+}
+#footer2 {
+  margin: 0%;
+}
+#asideRight, #asideLeft {
+  display:none;
+}
+#center {
+  margin: 0%;
+}
+}
