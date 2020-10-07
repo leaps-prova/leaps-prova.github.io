@@ -209,7 +209,7 @@
 
 	.IssueBibliographicCitation::before {
 		content: "";
-		background-image: url("img/durer_incisione.jpg");
+		background-image: url("../marco/cutouts/Eye\ 2.png");
 		background-size: 100% 100%;
 		filter: sepia(1);
 		-webkit-filter: sepia(1);

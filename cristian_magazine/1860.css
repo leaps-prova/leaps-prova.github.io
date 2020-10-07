@@ -297,7 +297,7 @@ font-size: 1.1em;
 #IssueIndex::before {
     column-span:all;
     content: "";
-    background-image: url("img/caricature.jpg");
+    background-image: url("../marco/cutouts/Eye\ 3.png");
     filter:sepia(90%) opacity(70%);
     background-size: 100% 100%;
     height:1000px;
