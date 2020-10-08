@@ -1,0 +1,113 @@
+@font-face {
+        font-family: 'hardingreg';
+    src: url('HardingText Regular.ttf');
+}
+
+
+body { 
+   opacity: 0;
+   transition: opacity .5s;
+}
+
+.enterblock {
+position: absolute;
+text-align: center;
+width: 70%;
+height: 70%;
+top: 5%;
+bottom: 15%;
+left: 15%;
+right: 15%;
+}
+
+.enterblock h1{
+text-align:center;
+font-family:'hardingreg';
+font-size: 600%;
+}
+
+span.enterbutton {
+font-family:'hardingreg';
+font-size:70%;
+color: black;
+font-size: 125%;
+color:black;
+text-decoration: none;
+position: relative;
+    top: 50px;
+}
+
+.enterbutton:hover {
+  color: grey;
+}
+
+
+.enterblock img{
+display:block;
+width: 26%;
+margin-left: auto;
+margin-right: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .enterblock h1 {
+    font-size: 500%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .enterblock h1 {
+    font-size: 400%;
+  }
+   .enterblock img{
+	display:block;
+	width: 45%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+    top: 50px;
+  }
+    span.enterbutton {
+  position: relative;
+  top: 50px;
+  
+  }
+}
+@media screen and (max-width: 700px) {
+  .enterblock h1 {
+    font-size: 250%;
+  }
+  .enterblock img{
+	display:block;
+	width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+    top: 50px;
+  }
+  span.enterbutton {
+  position: relative;
+  top: 200px;
+  
+  }
+}
+
+@media screen and (max-device-width: 600px) {
+  .enterblock h1 {
+    font-size: 450%;
+  }
+  .enterblock img{
+	display:block;
+	width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+    top: 20%;
+  }
+  span.enterbutton {
+  position: relative;
+  top: 70%;
+  font-size: 250%;
+  
+  }
+}
