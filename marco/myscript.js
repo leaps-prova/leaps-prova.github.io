@@ -1,3 +1,4 @@
+//Manage cover images
 $(document).ready (function(){
   if(!$("div").hasClass("coverpic")) {
  $( ".title").toggleClass('titlenoimage newClass');
